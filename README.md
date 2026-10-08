@@ -1,0 +1,126 @@
+# LLM API Pricing Tracker
+
+**A reproducible, source-linked pricing comparison for text-first language-model APIs.**
+
+![Validation](https://img.shields.io/badge/data-JSON%20validated-245b45) ![Version](https://img.shields.io/badge/status-initial%20catalog-5865c0) ![Currency](https://img.shields.io/badge/rates-USD%20%2F%201M%20tokens-blue)
+
+Compare standard API input, cached input, output, and combined costs across OpenAI, Anthropic, Google, xAI, Qwen, DeepSeek, Kimi, GLM, Mistral, and Meta/OpenRouter. Each model also has an independently maintained **weight-availability**, **license**, and **parameter-count** record.
+
+**Data cut-off: 2026-10-08.** This initial release imports much of the pricing snapshot curated in an earlier comparison. **Not every imported rate has been independently reconfirmed today.** Individual records expose `pricing_review` (`source_checked` or `imported_from_previous_table`) and a pricing source URL for a transparent re-audit. Do not treat a source link by itself as proof that the exact amount was verified. Check official pages before significant purchases.
+
+> **GitHub Pages is intentionally deferred.** This version is README + JSON + scripts + Actions, with no website framework or published webpage. A future UI can read the same JSON.
+
+## Ranking methodology
+
+- **Combined = the cost of 1 million uncached input tokens + 1 million output tokens**, not a generic weighted average. The input/output token ratio is exactly **1:1** for this index.
+- Rows rank by Combined ascending, then by cheaper **comparable cached-input** costs. An unknown cache price (`—`) is **not** zero.
+- For tiered pricing, the lowest/default short-context tier is used in the main row; the long-context boundary is explained in Notes. Rates are in **USD per 1M tokens**.
+- Promo and regular rates are different **rate entries**, not different models. Peak/off-peak rates also remain separate. Expired promotional rates should be moved into the changelog/history when the data is maintained.
+- An **open-weight** model is *not automatically* an OSI open-source system. Access to weights, the model's applicable license, and whether weights are actually downloadable are separately tracked. An **announced** future weight release is not labelled available.
+- Parameter counts are manufacturer/model-card disclosures, not guesses. For MoE models, total and activated parameters are different quantities. When not disclosed or not verified, fields stay `null`.
+- Models with exactly matching rates/conditions may share a **display row**, but each model has its own JSON object. Versions with different cache rates (e.g., Grok 4.5 vs 4.6, Sonnet 5 vs 5.5) stay separate.
+
+## Price leaderboard
+
+<!-- CATALOG:START -->
+| Rank | Provider | Model | Weights | Parameters (Total / Active) | Input | Cached Input | Output | Combined | Notes | Pricing source |
+|---:|---|---|---|---|---:|---:|---:|---:|---|---|
+| 1 | Qwen | Qwen3.7 Flash | Unverified | Not disclosed | $0.03 | — | $0.13 | **$0.16** | ≤32K; 32K–256K: $0.10/$0.40; 256K–1M: $0.20/$0.80 | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 2 | Meta / OpenRouter | Muse Spark 1.2/1.3 Contributor | Closed weights | Not disclosed | $0.10 | $0.002 | $0.20 | **$0.300000** | 1M context; prompts/outputs may be used to improve Meta products | [Source](https://openrouter.ai/meta/muse-spark-1.3-contributor) |
+| 3 | Qwen | Qwen3.5 Flash | Unverified | Not disclosed | $0.10 | — | $0.40 | **$0.50** | International | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 4 | Anthropic | Claude Haiku 5.5 | Closed weights | Not disclosed | $0.10 | $0.01 | $0.50 | **$0.60** | ≤100K; >100K: $0.50 input / $0.05 cache / $2.50 output | [Source](https://platform.claude.com/docs/en/models/haiku-5-5/overview) |
+| 5 | OpenAI | GPT-6 Luna | Closed weights | Not disclosed | $0.10 | $0.01 | $0.50 | **$0.60** | 1.05M context; >272K: $0.20/$0.75 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 6 | Qwen | Qwen3.8 Flash | Unverified | Not disclosed | $0.15 | — | $0.47 | **$0.62** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 7 | GLM / Z.AI | GLM-5.3-Flash | Open weights | [320B / 18B active](https://huggingface.co/zai-org/GLM-5.3-Flash) | $0.15 | $0.03 | $0.50 | **$0.65** | Standard price | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 8 | DeepSeek | DeepSeek V4.1 Flash — Off-peak | Unverified | Not disclosed | $0.15 | $0.003 | $0.60 | **$0.75** | 1M context; off-peak pricing | [Source](https://api-docs.deepseek.com/quick_start/pricing/) |
+| 9 | Mistral | Mistral Small 4 | Open weights | [119B / 6.5B active](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) | $0.15 | $0.015 | $0.60 | **$0.75** | 256K context | [Source](https://docs.mistral.ai/models/mistral-small-4-0-26-03) |
+| 10 | OpenAI | GPT-5.6 Luna | Closed weights | Not disclosed | $0.20 | $0.02 | $1.20 | **$1.40** | >272K: $0.40/$1.80 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 11 | Meta / OpenRouter | Muse Glimmer 30B | Open weights | [30B](https://openrouter.ai/meta/muse-glimmer-30b) | $0.30 | $0.04 | $1.10 | **$1.400000** | 131K context | [Source](https://openrouter.ai/meta/muse-glimmer-30b) |
+| 12 | OpenAI | GPT-5.4 nano | Closed weights | Not disclosed | $0.20 | $0.02 | $1.25 | **$1.45** | — | [Source](https://developers.openai.com/api/docs/pricing) |
+| 13 | DeepSeek | DeepSeek V4.1 Flash — Peak | Unverified | Not disclosed | $0.30 | $0.006 | $1.20 | **$1.50** | 1M context; peak pricing | [Source](https://api-docs.deepseek.com/quick_start/pricing/) |
+| 14 | Qwen | Qwen3.7 Plus — Promo | Unverified | [397B / 17B active](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) | $0.32 | — | $1.28 | **$1.60** | International alias; 20% off; regular $0.40/$1.60 | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 15 | Google | Gemini 3.1 Flash-Lite | Closed weights | Not disclosed | $0.25 | $0.025 | $1.50 | **$1.75** | — | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 16 | Qwen | Qwen3.6 Flash | Unverified | Not disclosed | $0.25 | — | $1.50 | **$1.75** | ≤256K; International | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 17 | Qwen | Qwen3.7 Plus — Regular Price | Unverified | [397B / 17B active](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) | $0.40 | — | $1.60 | **$2.00** | ≤256K | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 18 | DeepSeek | DeepSeek V4 Pro — Off-peak | Unverified | Not disclosed | $0.66 | $0.022 | $1.98 | **$2.64** | Off-peak pricing | [Source](https://api-docs.deepseek.com/quick_start/pricing/) |
+| 19 | Google | Gemini 3.5 Flash-Lite | Closed weights | Not disclosed | $0.30 | $0.03 | $2.50 | **$2.80** | — | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 20 | Qwen | Qwen3.5 Plus | Unverified | Not disclosed | $0.40 | — | $2.40 | **$2.80** | ≤256K; International | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 21 | xAI | Grok Build 0.1 | Closed weights | Not disclosed | $1.00 | $0.20 | $2.00 | **$3.00** | <200K; ≥200K: $2/$4 | [Source](https://docs.x.ai/developers/pricing) |
+| 22 | Qwen | Qwen3.6 Plus | Unverified | Not disclosed | $0.50 | — | $3.00 | **$3.50** | ≤256K; International | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 23 | xAI | Grok 4.20/4.3 | Closed weights | Not disclosed | $1.25 | $0.20 | $2.50 | **$3.75** | <200K; ≥200K: $2.50/$5 | [Source](https://docs.x.ai/developers/pricing) |
+| 24 | GLM / Z.AI | GLM-5 | Unverified | Not disclosed | $1.00 | $0.20 | $3.20 | **$4.20** | — | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 25 | Google | Gemini 3.6/3.7/3.8 Flash — Promo | Closed weights | Not disclosed | $0.75 | $0.075 | $3.75 | **$4.50** | Introductory price through Dec 31, 2026 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 26 | Kimi | Kimi K2.6 | Unverified | Not disclosed | $0.95 | $0.16 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
+| 27 | Kimi | Kimi K2.7 Code | Unverified | Not disclosed | $0.95 | $0.19 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
+| 28 | GLM / Z.AI | GLM-5-Turbo | Unverified | Not disclosed | $1.20 | $0.24 | $4.00 | **$5.20** | 200K context | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 29 | OpenAI | GPT-5.4 mini | Closed weights | Not disclosed | $0.75 | $0.075 | $4.50 | **$5.25** | — | [Source](https://developers.openai.com/api/docs/pricing) |
+| 30 | DeepSeek | DeepSeek V4 Pro — Peak | Unverified | Not disclosed | $1.32 | $0.044 | $3.96 | **$5.28** | Peak pricing | [Source](https://api-docs.deepseek.com/quick_start/pricing/) |
+| 31 | Meta / OpenRouter | Muse Spark 1.1/1.2/1.3 | Closed weights | Not disclosed | $1.25 | $0.15 | $4.25 | **$5.50** | 1M context; standard data policy | [Source](https://openrouter.ai/meta/muse-spark-1.3) |
+| 32 | Mistral | Mistral Large 4 | Announced, not released | [1,050B / 49B active](https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B) | $1.36 | $0.14 | $4.18 | **$5.54** | 1M context; public preview; regular published price | [Source](https://docs.mistral.ai/models/mistral-large-4-0) |
+| 33 | GLM / Z.AI | GLM-5.1 | Open weights | [754B](https://huggingface.co/zai-org/GLM-5.1) | $1.40 | $0.26 | $4.40 | **$5.800000** | 200K context | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 34 | GLM / Z.AI | GLM-5.2/5.3 | Open weights | Varies / see catalog | $1.40 | $0.26 | $4.40 | **$5.800000** | 1M context | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 35 | xAI | Grok 4.5 | Closed weights | Not disclosed | $2.00 | $0.30 | $6.00 | **$8.00** | <200K; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
+| 36 | xAI | Grok 4.6 | Closed weights | Not disclosed | $2.00 | $0.50 | $6.00 | **$8.00** | <200K; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
+| 37 | xAI | Grok 4.7 | Closed weights | Not disclosed | $2.00 | $0.50 | $6.00 | **$8.00** | 500K context; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
+| 38 | Qwen | Qwen3.8 Max | Unverified | Not disclosed | $2.00 | — | $6.00 | **$8.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 39 | Google | Gemini 3.6/3.7/3.8 Flash — Regular Price | Closed weights | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | Standard price from Jan 1, 2027 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 40 | Mistral | Mistral Medium 3.5 | Unverified | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | 256K context | [Source](https://docs.mistral.ai/models/) |
+| 41 | Kimi | Kimi K2.7 Code Highspeed | Unverified | Not disclosed | $1.90 | $0.38 | $8.00 | **$9.90** | ~262K context | [Source](https://www.kimi.com/) |
+| 42 | Qwen | Qwen3.7 Max | Unverified | Not disclosed | $2.50 | — | $7.50 | **$10.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| 43 | Google | Gemini 3.5 Flash | Closed weights | Not disclosed | $1.50 | $0.15 | $9.00 | **$10.50** | Thinking tokens billed as output | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 44 | Anthropic | Claude Sonnet 5.5 | Closed weights | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | Cache read reduced to $0.10 on Oct 7 | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 45 | OpenAI | GPT-6.1 Sol | Closed weights | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | 1.05M context; >272K: $4/$0.20/$15 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 46 | Anthropic | Claude Sonnet 5 | Closed weights | Not disclosed | $2.00 | $0.20 | $10.00 | **$12.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 47 | OpenAI | GPT-6 Sol | Closed weights | Not disclosed | $2.00 | $0.20 | $10.00 | **$12.00** | 1.05M context; >272K: $4/$0.40/$15 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 48 | Google | Gemini 3.1 Pro Preview | Closed weights | Not disclosed | $2.00 | $0.20 | $12.00 | **$14.00** | ≤200K; >200K: $4/$18 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 49 | OpenAI | GPT-5.6 Terra | Closed weights | Not disclosed | $2.00 | $0.20 | $12.00 | **$14.00** | >272K: $4/$18 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 50 | OpenAI | GPT-5.4 | Closed weights | Not disclosed | $2.50 | $0.25 | $15.00 | **$17.50** | >272K long-context surcharge | [Source](https://developers.openai.com/api/docs/pricing) |
+| 51 | Anthropic | Claude Sonnet 4.6 | Closed weights | Not disclosed | $3.00 | $0.30 | $15.00 | **$18.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 52 | Kimi | Kimi K3 | Open weights | [2,800B / 104B active](https://huggingface.co/moonshotai/Kimi-K3) | $3.00 | $0.30 | $15.00 | **$18.00** | 1M context | [Source](https://www.kimi.com/) |
+| 53 | Anthropic | Claude Opus 5.5 | Closed weights | Not disclosed | $4.00 | $0.20 | $20.00 | **$24.00** | 1M context | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 54 | OpenAI | GPT-5.6 Sol — Promo | Closed weights | Not disclosed | $4.00 | $0.40 | $20.00 | **$24.00** | Promo available at least through Nov 21, 2026; regular $5/$30 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 55 | Anthropic | Claude Opus 4.7/4.8/5 | Closed weights | Not disclosed | $5.00 | $0.50 | $25.00 | **$30.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 56 | OpenAI | GPT-5.5 | Closed weights | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | — | [Source](https://developers.openai.com/api/docs/pricing) |
+| 57 | OpenAI | GPT-5.6 Sol — Regular Price | Closed weights | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | Original price; currently $4/$20 promo | [Source](https://developers.openai.com/api/docs/pricing) |
+| 58 | Anthropic | Claude Fable 5.1 | Closed weights | Not disclosed | $10.00 | $0.25 | $50.00 | **$60.00** | 1M context; low 0.025x cache-read multiplier | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 59 | Anthropic | Claude Fable 5 | Closed weights | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 60 | OpenAI | GPT-6 Astra | Closed weights | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | 1.05M context; >272K: $20/$2/$75 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 61 | OpenAI | GPT-5.4/5.5 Pro | Closed weights | Not disclosed | $30.00 | — | $180.00 | **$210.00** | Maximum-compute tier | [Source](https://developers.openai.com/api/docs/pricing) |
+<!-- CATALOG:END -->
+
+## Use the repository
+
+Requires **Python 3.10+**; runtime and tests use only Python's standard library.
+
+```bash
+python scripts/validate_data.py
+python scripts/generate_readme.py
+python -m unittest discover -s tests -v
+python scripts/check_sources.py --out source-report.json
+```
+
+When editing a model or price:
+
+1. Update `data/models.json` (weights/parameters) or `data/pricing.json` (one or more rate entries). Retain source links and add an actual `pricing_verified_at` when you have checked the source.
+2. Run `python scripts/update_history.py` to record changes to the **local catalog** in `data/pricing-history.json`. This is not a backfilled history of the vendor's original announcements.
+3. Run `python scripts/generate_readme.py`, `python scripts/generate_models.py`, and `python scripts/validate_data.py`; commit the changed JSON, snapshot, history and README.
+4. Submit changes by pull request with vendor source, timestamp, currency and context tier. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+The `source-watch.yml` scheduled workflow checks a small set of monitored pages for expected snippets and saves a report artifact. A missing snippet is **only a manual-review flag** (websites may use client-side rendering, blocked bots, or changed layouts). It never silently overwrites token prices. `validate.yml` checks data integrity and a reproducible README on pull requests.
+
+## Data and documentation
+
+| File | Purpose |
+|---|---|
+| [`docs/model-catalog.md`](docs/model-catalog.md) | Generated per-model open-weight/license/parameter index |
+| [`data/models.json`](data/models.json) | Per-model name, provider, open-weight status, license, total/active parameters, links |
+| [`data/pricing.json`](data/pricing.json) | Per-rate input, cached input, output, pricing type, source and review state |
+| [`data/pricing-history.json`](data/pricing-history.json) | Changes subsequently recorded **within this repository** |
+| [`data/last-recorded-prices.json`](data/last-recorded-prices.json) | Baseline for audit-friendly local history generation |
+| [`data/source-watches.json`](data/source-watches.json) | Monitored source-page snippets; edit cautiously |
+| [`docs/methodology.md`](docs/methodology.md) | Detailed price, parameter, license, and validation methodology |
+| [`docs/changelog.md`](docs/changelog.md) | Human-readable catalog update notes |
+
+## Contributing and licensing
+
+Dataset/editorial code is made available under the **MIT License**; this **does not** relicense any third-party model weights, text, trademarks, or vendors' documentation. Always read the actual license of each model. For corrections, open a pull request or issue and include official citations.
