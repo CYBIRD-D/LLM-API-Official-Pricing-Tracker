@@ -17,7 +17,7 @@ Generated from [`data/models.json`](../data/models.json). **Open** = matching do
 | DeepSeek | DeepSeek V4 Pro | Open | mit | 1.6T / 49B active | MoE | [Source](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) | Official V4 Pro post-trained checkpoint is downloadable. |
 | DeepSeek | DeepSeek V4.1 Flash | Open | mit | 552B / 8B–16B active | MoE | [Source](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) | Official model card: 552B backbone; active parameters vary by inference mode (8B / 16B). Not the earlier V4 Flash 284B/13B model. |
 | GLM / Z.AI | GLM-5 | Open | mit | 744B / 40B active | MoE | [Source](https://huggingface.co/zai-org/GLM-5) | Official model card states 744B/40B (backbone). Some repositories show ~754B including extra tensors. |
-| GLM / Z.AI | GLM-5-Turbo | Closed | Not verified | Not disclosed | Not disclosed | [Source](https://docs.z.ai/guides/overview/pricing) | GLM-5 base is public, but Turbo is a separately named hosted SKU with no verified corresponding Turbo checkpoint.; Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture. |
+| GLM / Z.AI | GLM-5-Turbo | Closed | Not verified | Not disclosed | Not disclosed | — | Z.AI says GLM-5 Turbo was trained/optimized specifically for OpenClaw agents and tool use, and is faster. It has not confirmed that Turbo uses the same checkpoint as publicly released GLM-5.; No matching public GLM-5-Turbo checkpoint verified. Open GLM-5 does not prove this variant is open. |
 | GLM / Z.AI | GLM-5.1 | Open | mit | 744B / 40B active | MoE | [Source](https://huggingface.co/zai-org/GLM-5.1) | Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ. |
 | GLM / Z.AI | GLM-5.2 | Open | mit | 744B / 40B active | MoE | [Source](https://huggingface.co/zai-org/GLM-5.2) | Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ. |
 | GLM / Z.AI | GLM-5.3 | Open | glm-5.3 | 744B / 40B active | MoE | [Source](https://huggingface.co/zai-org/GLM-5.3) | Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ. |
@@ -29,9 +29,9 @@ Generated from [`data/models.json`](../data/models.json). **Open** = matching do
 | Google | Gemini 3.6 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Google | Gemini 3.7 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Google | Gemini 3.8 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
-| Kimi | Kimi K2.6 | Closed | Not verified | Not disclosed | Not disclosed | — | Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture. |
-| Kimi | Kimi K2.7 Code | Closed | Not verified | Not disclosed | Not disclosed | — | Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture. |
-| Kimi | Kimi K2.7 Code Highspeed | Closed | Not verified | Not disclosed | Not disclosed | — | Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture. |
+| Kimi | Kimi K2.6 | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.6) | Official Kimi K2.6 checkpoint: 1T total / 32B active. |
+| Kimi | Kimi K2.7 Code | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | Official Kimi K2.7 Code checkpoint: 1T total / 32B active. |
+| Kimi | Kimi K2.7 Code Highspeed | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | Kimi confirms HighSpeed is the same K2.7 Code model, served roughly 5–6× faster (https://www.kimi.com/code/docs/en/kimi-code/whats-new.html). |
 | Kimi | Kimi K3 | Open | kimi-k3 | 2.8T / 104B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K3) | — |
 | Meta / OpenRouter | Muse Glimmer 30B | Open | Not verified | 30B | Dense | [Source](https://openrouter.ai/meta/muse-glimmer-30b) | — |
 | Meta / OpenRouter | Muse Spark 1.1 | Closed | Not verified | Not disclosed | Not disclosed | — | — |
