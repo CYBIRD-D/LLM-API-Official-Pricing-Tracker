@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-08 — Kimi models, faster API tiers and README clarity
+
+- Kimi K2.6 and Kimi K2.7 Code are **Open**, with official model files, 1T total / 32B active parameters, and Modified MIT licenses.
+- Kimi K2.7 Code Highspeed is also **Open**, because Kimi confirms it uses the same open K2.7 Code model at higher serving speed and cost.
+- Kimi K3 remains Open (2.8T total / 104B active).
+- GLM-5-Turbo stays **Closed**: Z.AI describes training optimizations for agents; its weights have not been verified as the same released checkpoint as GLM-5.
+- Rewrote the README introduction in plain language and moved **Last updated** to a clear heading above the table.
+- No numeric API pricing changes.
+
 ## 2026-10-08 — Mistral Medium 3.5 openness correction
 
 - Corrected Mistral Medium 3.5 from Closed to **Open**: Mistral publishes the matching `Mistral-Medium-3.5-128B` checkpoint. Architecture **dense 128B**; license **Modified MIT** (not standard MIT).
