@@ -59,6 +59,29 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(ds['active_parameters_range_b'],[8,16])
         self.assertIn('8B–16B active',params_display([ds['id']],self.models))
 
+    def test_kimi_open_models_and_speed_tier(self):
+        ids = [
+            'kimi--kimi-k2-6', 'kimi--kimi-k2-7-code',
+            'kimi--kimi-k2-7-code-highspeed', 'kimi--kimi-k3'
+        ]
+        self.assertTrue(all(self.models[mid]['openness'] == 'Open' for mid in ids))
+        self.assertEqual(self.models['kimi--kimi-k2-6']['total_parameters_b'], 1000)
+        self.assertEqual(self.models['kimi--kimi-k2-7-code']['active_parameters_b'], 32)
+        highspeed = self.models['kimi--kimi-k2-7-code-highspeed']
+        self.assertEqual(highspeed['active_parameters_b'], 32)
+        self.assertEqual(highspeed['hosted_variant_of'], 'kimi--kimi-k2-7-code')
+
+    def test_glm_turbo_not_assumed_open(self):
+        turbo = self.models['glm-z-ai--glm-5-turbo']
+        self.assertEqual(turbo['openness'], 'Closed')
+        self.assertIsNone(turbo['total_parameters_b'])
+        self.assertEqual(self.models['glm-z-ai--glm-5']['openness'], 'Open')
+
+    def test_readme_has_visible_update_date(self):
+        readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
+        self.assertIn('## Last updated: **2026-10-08**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
+
     def test_table_row_count(self):
         table=make_table()
         self.assertEqual(len(table.splitlines()),len(self.rates)+2)
