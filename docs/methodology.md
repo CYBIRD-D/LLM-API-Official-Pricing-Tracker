@@ -30,6 +30,10 @@ Grok 4.5 and 4.6 **~1.5T** and Grok 4.7 **~2.1T** are attributed to Elon Musk's 
 
 Mistral Medium 3.5 is **Open**: the creator-published [`Mistral-Medium-3.5-128B`](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) checkpoint is a **128B dense** model licensed under **Modified MIT**; business-size restrictions mean this is not the unmodified MIT license.
 
+**Kimi:** Moonshot has released model files for [K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) and [K2.7 Code](https://huggingface.co/moonshotai/Kimi-K2.7-Code). Both have 1T total / 32B active parameters under Modified MIT. [K3](https://huggingface.co/moonshotai/Kimi-K3) is also open, with 2.8T / 104B and its own Kimi K3 License. Kimi's [official HighSpeed announcement](https://www.kimi.com/code/docs/en/kimi-code/whats-new.html) says K2.7 Code HighSpeed uses exactly the same K2.7 Code model, only served roughly 5–6× faster. This is an example where a higher-priced API tier can inherit the base model's Open status. Note: the Kimi Code alias `kimi-for-coding` currently routes to K2.8 Preview, which is not in this pay-as-you-go price table.
+
+**GLM-5-Turbo:** Z.AI's [official model page](https://docs.z.ai/guides/llm/glm-5-turbo) explains that Turbo was optimized for OpenClaw agent tasks **during training**, with changes designed for tool use, task planning and long jobs. While it is faster than GLM-5, that does **not** establish that the two API names correspond to one identical checkpoint on different hardware. No matching Turbo checkpoint has been verified, so it remains **Closed** and its parameters are left unknown. The base GLM-5 itself remains **Open**.
+
 **Mistral Large 4:** public release was announced for a future date; unless the matching checkpoint has actually appeared and been checked, it stays **Closed**. Its ~1.05T total / ~49B core-active figures are separately documented.
 
 ## 3. Provenance and source review
