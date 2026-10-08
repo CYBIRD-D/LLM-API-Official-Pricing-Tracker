@@ -1,0 +1,53 @@
+{
+  "watches": [
+    {
+      "name": "OpenAI API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "patterns": [
+        "GPT"
+      ]
+    },
+    {
+      "name": "Anthropic API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "patterns": [
+        "Claude"
+      ]
+    },
+    {
+      "name": "Google Gemini pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "patterns": [
+        "Gemini"
+      ]
+    },
+    {
+      "name": "Mistral pricing",
+      "url": "https://docs.mistral.ai/inference/pricing",
+      "patterns": [
+        "Mistral"
+      ]
+    },
+    {
+      "name": "Qwen Model Studio pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "patterns": [
+        "qwen"
+      ]
+    },
+    {
+      "name": "DeepSeek pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "patterns": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "name": "Z.AI pricing",
+      "url": "https://docs.z.ai/guides/overview/pricing",
+      "patterns": [
+        "GLM"
+      ]
+    }
+  ]
+}
