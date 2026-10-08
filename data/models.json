@@ -5,22 +5,23 @@
       "id": "qwen--qwen3-7-flash",
       "name": "Qwen3.7 Flash",
       "provider": "Qwen",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+      "parameter_notes": "Alibaba API listing verified; no directly corresponding 3.7 Flash downloadable model identified.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture.",
+      "openness_source": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash"
     },
     {
       "id": "meta-openrouter--muse-spark-1-2-contributor",
       "name": "Muse Spark 1.2 Contributor",
       "provider": "Meta / OpenRouter",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -29,13 +30,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "meta/muse-spark-1.2-contributor",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "meta-openrouter--muse-spark-1-3-contributor",
       "name": "Muse Spark 1.3 Contributor",
       "provider": "Meta / OpenRouter",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -44,28 +45,30 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "meta/muse-spark-1.3-contributor",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-5-flash",
       "name": "Qwen3.5 Flash",
       "provider": "Qwen",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "apache-2.0",
+      "total_parameters_b": 35,
+      "active_parameters_b": 3,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "parameter_notes": "Qwen model card explicitly maps hosted Qwen3.5-Flash to public Qwen3.5-35B-A3B; hosted API has added tools/context.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "related_public_checkpoint": "Qwen/Qwen3.5-35B-A3B"
     },
     {
       "id": "openai--gpt-6-luna",
       "name": "GPT-6 Luna",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -74,13 +77,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "gpt-6-luna",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-haiku-5-5",
       "name": "Claude Haiku 5.5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -89,58 +92,66 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "claude-haiku-5-5",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-8-flash",
       "name": "Qwen3.8 Flash",
       "provider": "Qwen",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
+      "license": "qwen-community-1.0",
+      "total_parameters_b": 125,
+      "active_parameters_b": 6,
+      "architecture": "MoE",
       "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "parameter_notes": "Related open-weight Flash-Next is 125B/6B active (+51B n-gram, 4B MTP); not assumed identical to hosted Flash.",
+      "parameter_notes": "Official model card: API Qwen3.8-Flash is based on public Flash-Next. 125B is LM core, with additional 51B n-gram embeddings and 4B MTP; production API adds features.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+      "related_public_checkpoint": "Qwen/Qwen3.8-Flash-Next"
     },
     {
       "id": "glm-z-ai--glm-5-3-flash",
       "name": "GLM-5.3-Flash",
       "provider": "GLM / Z.AI",
-      "weights_status": "open_weight",
       "license": "mit",
       "total_parameters_b": 320,
       "active_parameters_b": 18,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "parameter_notes": null,
+      "parameter_notes": "Public model; 320B / 18B active according to official card.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/zai-org/GLM-5.3-Flash"
     },
     {
       "id": "deepseek--deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "provider": "DeepSeek",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
+      "license": "mit",
+      "total_parameters_b": 552,
       "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "parameter_notes": "Official model card: 552B backbone; active parameters vary by inference mode (8B / 16B). Not the earlier V4 Flash 284B/13B model.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "active_parameters_range_b": [
+        8,
+        16
+      ],
+      "openness_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
     },
     {
       "id": "mistral--mistral-small-4",
       "name": "Mistral Small 4",
       "provider": "Mistral",
-      "weights_status": "open_weight",
       "license": "apache-2.0",
       "total_parameters_b": 119,
       "active_parameters_b": 6.5,
@@ -149,13 +160,13 @@
       "parameter_notes": null,
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open"
     },
     {
       "id": "openai--gpt-5-6-luna",
       "name": "GPT-5.6 Luna",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -164,13 +175,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "meta-openrouter--muse-glimmer-30b",
       "name": "Muse Glimmer 30B",
       "provider": "Meta / OpenRouter",
-      "weights_status": "open_weight",
       "license": null,
       "total_parameters_b": 30,
       "active_parameters_b": null,
@@ -179,13 +190,13 @@
       "parameter_notes": null,
       "metadata_verified_at": "2026-10-08",
       "api_model_id": "meta/muse-glimmer-30b",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open"
     },
     {
       "id": "openai--gpt-5-4-nano",
       "name": "GPT-5.4 nano",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -194,28 +205,30 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-7-plus",
       "name": "Qwen3.7 Plus",
       "provider": "Qwen",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": 397,
       "active_parameters_b": 17,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "parameter_notes": "Parameter figures appear in Qwen comparison; hosted API weights availability not verified.",
+      "parameter_notes": "Qwen official comparison table reports 397B/17B for Qwen3.7-Plus; no matching public Qwen3.7-Plus checkpoint verified. NOT the 3.5 release.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture.",
+      "openness_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
     },
     {
       "id": "google--gemini-3-1-flash-lite",
       "name": "Gemini 3.1 Flash-Lite",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -224,43 +237,46 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-6-flash",
       "name": "Qwen3.6 Flash",
       "provider": "Qwen",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "apache-2.0",
+      "total_parameters_b": 35,
+      "active_parameters_b": 3,
+      "architecture": "MoE",
+      "parameter_source": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+      "parameter_notes": "Alibaba announcement directly identifies open Qwen3.6-35B-A3B as the model to call using the Qwen3.6-Flash API name; API may differ.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+      "related_public_checkpoint": "Qwen/Qwen3.6-35B-A3B"
     },
     {
       "id": "deepseek--deepseek-v4-pro",
       "name": "DeepSeek V4 Pro",
       "provider": "DeepSeek",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "mit",
+      "total_parameters_b": 1600,
+      "active_parameters_b": 49,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "parameter_notes": "Official V4 Pro post-trained checkpoint is downloadable.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
     },
     {
       "id": "google--gemini-3-5-flash-lite",
       "name": "Gemini 3.5 Flash-Lite",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -269,28 +285,30 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-5-plus",
       "name": "Qwen3.5 Plus",
       "provider": "Qwen",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "apache-2.0",
+      "total_parameters_b": 397,
+      "active_parameters_b": 17,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "parameter_notes": "Alibaba explicitly maps hosted Qwen3.5-Plus to public Qwen3.5-397B-A17B; API differs in built-in features.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "related_public_checkpoint": "Qwen/Qwen3.5-397B-A17B"
     },
     {
       "id": "xai--grok-build-0-1",
       "name": "Grok Build 0.1",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -299,28 +317,30 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "qwen--qwen3-6-plus",
       "name": "Qwen3.6 Plus",
       "provider": "Qwen",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://huggingface.co/Qwen/collections",
+      "parameter_notes": "Public Qwen3.6 35B/27B variants do not automatically establish a release of the hosted Plus checkpoint.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture.",
+      "openness_source": "https://huggingface.co/Qwen/collections"
     },
     {
       "id": "xai--grok-4-20",
       "name": "Grok 4.20",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -329,13 +349,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "xai--grok-4-3",
       "name": "Grok 4.3",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -344,28 +364,29 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "glm-z-ai--glm-5",
       "name": "GLM-5",
       "provider": "GLM / Z.AI",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "mit",
+      "total_parameters_b": 744,
+      "active_parameters_b": 40,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/zai-org/GLM-5",
+      "parameter_notes": "Official model card states 744B/40B (backbone). Some repositories show ~754B including extra tensors.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/zai-org/GLM-5"
     },
     {
       "id": "google--gemini-3-6-flash",
       "name": "Gemini 3.6 Flash",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -374,13 +395,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "google--gemini-3-7-flash",
       "name": "Gemini 3.7 Flash",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -389,13 +410,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "google--gemini-3-8-flash",
       "name": "Gemini 3.8 Flash",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -404,13 +425,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "kimi--kimi-k2-6",
       "name": "Kimi K2.6",
       "provider": "Kimi",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -419,13 +440,14 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture."
     },
     {
       "id": "kimi--kimi-k2-7-code",
       "name": "Kimi K2.7 Code",
       "provider": "Kimi",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -434,28 +456,31 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture."
     },
     {
       "id": "glm-z-ai--glm-5-turbo",
       "name": "GLM-5-Turbo",
       "provider": "GLM / Z.AI",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://docs.z.ai/guides/overview/pricing",
+      "parameter_notes": "GLM-5 base is public, but Turbo is a separately named hosted SKU with no verified corresponding Turbo checkpoint.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture.",
+      "openness_source": "https://docs.z.ai/guides/overview/pricing"
     },
     {
       "id": "openai--gpt-5-4-mini",
       "name": "GPT-5.4 mini",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -464,13 +489,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "meta-openrouter--muse-spark-1-1",
       "name": "Muse Spark 1.1",
       "provider": "Meta / OpenRouter",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -479,13 +504,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "meta-openrouter--muse-spark-1-2",
       "name": "Muse Spark 1.2",
       "provider": "Meta / OpenRouter",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -494,13 +519,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "meta-openrouter--muse-spark-1-3",
       "name": "Muse Spark 1.3",
       "provider": "Meta / OpenRouter",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -509,13 +534,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "meta/muse-spark-1.3",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "mistral--mistral-large-4",
       "name": "Mistral Large 4",
       "provider": "Mistral",
-      "weights_status": "announced_open_weight",
       "license": null,
       "total_parameters_b": 1050,
       "active_parameters_b": 49,
@@ -524,118 +549,133 @@
       "parameter_notes": "Weights planned Oct 31, 2026; 49B core activated, ~52B including embeddings / output layers.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": "mistral-large-4",
-      "api_status": "public_preview"
+      "api_status": "public_preview",
+      "openness": "Closed",
+      "openness_note": "Release of public checkpoint announced but not verified as downloadable by the data cutoff."
     },
     {
       "id": "glm-z-ai--glm-5-1",
       "name": "GLM-5.1",
       "provider": "GLM / Z.AI",
-      "weights_status": "open_weight",
       "license": "mit",
-      "total_parameters_b": 754,
-      "active_parameters_b": null,
+      "total_parameters_b": 744,
+      "active_parameters_b": 40,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/zai-org/GLM-5.1",
-      "parameter_notes": "Approximate model-card size; active params not independently verified.",
+      "parameter_notes": "Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/zai-org/GLM-5.1"
     },
     {
       "id": "glm-z-ai--glm-5-2",
       "name": "GLM-5.2",
       "provider": "GLM / Z.AI",
-      "weights_status": "open_weight",
-      "license": null,
-      "total_parameters_b": 753,
-      "active_parameters_b": null,
+      "license": "mit",
+      "total_parameters_b": 744,
+      "active_parameters_b": 40,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/zai-org/GLM-5.2",
-      "parameter_notes": "Approximate model-card size; active params not independently verified.",
+      "parameter_notes": "Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/zai-org/GLM-5.2"
     },
     {
       "id": "glm-z-ai--glm-5-3",
       "name": "GLM-5.3",
       "provider": "GLM / Z.AI",
-      "weights_status": "open_weight",
       "license": "glm-5.3",
-      "total_parameters_b": null,
-      "active_parameters_b": null,
+      "total_parameters_b": 744,
+      "active_parameters_b": 40,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/zai-org/GLM-5.3",
-      "parameter_notes": null,
+      "parameter_notes": "Uses GLM-5-class 744B/40B backbone; GLM-5.3 documentation says same base as GLM-5.2. Totals including auxiliary layers may differ.",
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/zai-org/GLM-5.3"
     },
     {
       "id": "xai--grok-4-5",
       "name": "Grok 4.5",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
-      "total_parameters_b": null,
+      "total_parameters_b": 1500,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://x.com/elonmusk/status/2078289996323148076",
+      "parameter_notes": "Approximate scale claimed by Elon Musk on X; not specified or independently verified in xAI model documentation. 4.5/4.6 1.5T, 4.7 2.1T.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_source": "https://x.com/elonmusk/status/2078289996323148076",
+      "parameter_basis": "founder_claim",
+      "openness_note": "Public model weights unavailable; parameter number is an unverified founder statement."
     },
     {
       "id": "xai--grok-4-6",
       "name": "Grok 4.6",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
-      "total_parameters_b": null,
+      "total_parameters_b": 1500,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://x.com/elonmusk/status/2082123925283041545",
+      "parameter_notes": "Approximate scale claimed by Elon Musk on X; not specified or independently verified in xAI model documentation. 4.5/4.6 1.5T, 4.7 2.1T.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_source": "https://x.com/elonmusk/status/2082123925283041545",
+      "parameter_basis": "founder_claim",
+      "openness_note": "Public model weights unavailable; parameter number is an unverified founder statement."
     },
     {
       "id": "xai--grok-4-7",
       "name": "Grok 4.7",
       "provider": "xAI",
-      "weights_status": "closed_weight",
       "license": null,
-      "total_parameters_b": null,
+      "total_parameters_b": 2100,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://x.com/elonmusk/status/2082123925283041545",
+      "parameter_notes": "Approximate scale claimed by Elon Musk on X; not specified or independently verified in xAI model documentation. 4.5/4.6 1.5T, 4.7 2.1T.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_source": "https://x.com/elonmusk/status/2082123925283041545",
+      "parameter_basis": "founder_claim",
+      "openness_note": "Public model weights unavailable; parameter number is an unverified founder statement."
     },
     {
       "id": "qwen--qwen3-8-max",
       "name": "Qwen3.8 Max",
       "provider": "Qwen",
-      "weights_status": "unknown",
-      "license": null,
-      "total_parameters_b": null,
-      "active_parameters_b": null,
-      "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "license": "qwen3.8-max",
+      "total_parameters_b": 2400,
+      "active_parameters_b": 95,
+      "architecture": "MoE",
+      "parameter_source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "parameter_notes": "Qwen official checkpoint now downloadable; API adds vision, non-thinking mode, 1M default context and tools.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "related_public_checkpoint": "Qwen/Qwen3.8-2.4T-A95B"
     },
     {
       "id": "mistral--mistral-medium-3-5",
       "name": "Mistral Medium 3.5",
       "provider": "Mistral",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -644,13 +684,14 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture."
     },
     {
       "id": "kimi--kimi-k2-7-code-highspeed",
       "name": "Kimi K2.7 Code Highspeed",
       "provider": "Kimi",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -659,28 +700,31 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture."
     },
     {
       "id": "qwen--qwen3-7-max",
       "name": "Qwen3.7 Max",
       "provider": "Qwen",
-      "weights_status": "unknown",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
       "architecture": null,
-      "parameter_source": null,
-      "parameter_notes": null,
-      "metadata_verified_at": null,
+      "parameter_source": "https://docs.qwencloud.com/developer-guides/getting-started/vision-models",
+      "parameter_notes": "API model listed; corresponding downloadable 3.7 Max checkpoint not verified.",
+      "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed",
+      "openness_note": "Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture.",
+      "openness_source": "https://docs.qwencloud.com/developer-guides/getting-started/vision-models"
     },
     {
       "id": "google--gemini-3-5-flash",
       "name": "Gemini 3.5 Flash",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -689,13 +733,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-6-1-sol",
       "name": "GPT-6.1 Sol",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -704,13 +748,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "gpt-6.1-sol",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -719,13 +763,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "claude-sonnet-5-5",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-6-sol",
       "name": "GPT-6 Sol",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -734,13 +778,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "gpt-6-sol",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -749,13 +793,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-6-terra",
       "name": "GPT-5.6 Terra",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -764,13 +808,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "google--gemini-3-1-pro-preview",
       "name": "Gemini 3.1 Pro Preview",
       "provider": "Google",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -779,13 +823,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-4",
       "name": "GPT-5.4",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -794,13 +838,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -809,13 +853,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "kimi--kimi-k3",
       "name": "Kimi K3",
       "provider": "Kimi",
-      "weights_status": "open_weight",
       "license": "kimi-k3",
       "total_parameters_b": 2800,
       "active_parameters_b": 104,
@@ -824,13 +868,13 @@
       "parameter_notes": null,
       "metadata_verified_at": "2026-10-08",
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Open"
     },
     {
       "id": "anthropic--claude-opus-5-5",
       "name": "Claude Opus 5.5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -839,13 +883,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "claude-opus-5-5",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-6-sol",
       "name": "GPT-5.6 Sol",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -854,13 +898,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -869,13 +913,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -884,13 +928,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-opus-5",
       "name": "Claude Opus 5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -899,13 +943,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-5",
       "name": "GPT-5.5",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -914,13 +958,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -929,13 +973,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "anthropic--claude-fable-5",
       "name": "Claude Fable 5",
       "provider": "Anthropic",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -944,13 +988,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -959,13 +1003,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": "gpt-6-astra",
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-4-pro",
       "name": "GPT-5.4 Pro",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -974,13 +1018,13 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     },
     {
       "id": "openai--gpt-5-5-pro",
       "name": "GPT-5.5 Pro",
       "provider": "OpenAI",
-      "weights_status": "closed_weight",
       "license": null,
       "total_parameters_b": null,
       "active_parameters_b": null,
@@ -989,7 +1033,8 @@
       "parameter_notes": null,
       "metadata_verified_at": null,
       "api_model_id": null,
-      "api_status": "active_or_unspecified"
+      "api_status": "active_or_unspecified",
+      "openness": "Closed"
     }
   ]
 }

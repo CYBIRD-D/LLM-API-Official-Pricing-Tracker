@@ -1,21 +1,27 @@
-"""Create the individual-model parameter and weight catalog."""
-from catalog import ROOT,catalog,validate
-def esc(s):return str(s).replace('|','\\|').replace('\n',' ')
+"""Create the individual-model Open/Closed and parameter index."""
+from catalog import ROOT,catalog,validate,params_display
+
+def esc(s):
+    return str(s).replace('|','\\|').replace('\n',' ')
+
 def make_model_catalog():
-    models,rates=catalog();errors=validate(models,rates)
-    if errors:raise ValueError('; '.join(errors))
-    lines=['# Model Weights, Licenses and Parameters','',
-      'Generated from [`data/models.json`](../data/models.json). Unknown values are deliberately not guessed.',
-      '', '| Provider | Model | Availability of weights | License | Parameters (total / active) | Architecture | Model card |',
-      '|---|---|---|---|---|---|---|']
+    models,rates=catalog()
+    errors=validate(models,rates)
+    if errors: raise ValueError('; '.join(errors))
+    lines=['# Model Openness, Licenses and Parameters','',
+      'Generated from [`data/models.json`](../data/models.json). **Open** = matching downloadable model checkpoint; **Closed** = no matching public checkpoint verified. These labels do not indicate whether a license is OSI-approved.',
+      '', '| Provider | Model | Open/Closed | License | Parameters (total / active) | Architecture | Evidence | Notes |',
+      '|---|---|---|---|---|---|---|---|']
     for m in sorted(models.values(),key=lambda x:(x['provider'].lower(),x['name'].lower())):
-        v=m['weights_status'].replace('_',' ');t=m['total_parameters_b'];a=m['active_parameters_b']
-        param='Unknown' if t is None else f'{t:g}B'+(f' / {a:g}B active' if a is not None else '')
-        link='[Model card]('+m['parameter_source']+')' if m['parameter_source'] else '—'
-        vals=[m['provider'],m['name'],v,m['license'] or 'Not verified',param,m['architecture'] or 'Not disclosed',link]
+        param=params_display([m['id']],models)
+        link='[Source]('+m['parameter_source']+')' if m.get('parameter_source') else '—'
+        notes='; '.join(filter(None,[m.get('parameter_notes'),m.get('openness_note')])) or '—'
+        vals=[m['provider'],m['name'],m['openness'],m.get('license') or 'Not verified',param,m.get('architecture') or 'Not disclosed',link,notes]
         lines.append('| '+' | '.join(esc(x) for x in vals)+' |')
-    lines+=['','**Note:** `announced_open_weight` means the release is planned, not that weights are downloadable. Data about model parameters is held to the standards in [methodology](methodology.md).','']
+    lines += ['','**Caution:** A branded hosted API may have extra tools/context or post-training changes relative to a corresponding released checkpoint. Founder-claimed figures are not independently verified. See [methodology](methodology.md).','']
     return '\n'.join(lines)
+
 if __name__=='__main__':
-    (ROOT/'docs/model-catalog.md').write_text(make_model_catalog(),encoding='utf8')
+    path=ROOT/'docs/model-catalog.md'
+    path.write_text(make_model_catalog(),encoding='utf8')
     print('Regenerated docs/model-catalog.md')
