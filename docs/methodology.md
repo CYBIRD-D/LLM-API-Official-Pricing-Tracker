@@ -27,6 +27,9 @@ GLM-5's technical model description lists **744B backbone / 40B active**; some w
 
 Grok 4.5 and 4.6 **~1.5T** and Grok 4.7 **~2.1T** are attributed to Elon Musk's public X comments; they are **not independently verified xAI model-card specifications**, and activated parameter counts are not public. The reported mapping may change.
 
+
+Mistral Medium 3.5 is **Open**: the creator-published [`Mistral-Medium-3.5-128B`](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) checkpoint is a **128B dense** model licensed under **Modified MIT**; business-size restrictions mean this is not the unmodified MIT license.
+
 **Mistral Large 4:** public release was announced for a future date; unless the matching checkpoint has actually appeared and been checked, it stays **Closed**. Its ~1.05T total / ~49B core-active figures are separately documented.
 
 ## 3. Provenance and source review

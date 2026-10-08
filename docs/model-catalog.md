@@ -40,7 +40,7 @@ Generated from [`data/models.json`](../data/models.json). **Open** = matching do
 | Meta / OpenRouter | Muse Spark 1.3 | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Meta / OpenRouter | Muse Spark 1.3 Contributor | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Mistral | Mistral Large 4 | Closed | Not verified | 1.05T / 49B active | MoE | [Source](https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B) | Weights planned Oct 31, 2026; 49B core activated, ~52B including embeddings / output layers.; Release of public checkpoint announced but not verified as downloadable by the data cutoff. |
-| Mistral | Mistral Medium 3.5 | Closed | Not verified | Not disclosed | Not disclosed | — | Corresponding publicly downloadable checkpoint not verified; not proof a proprietary architecture. |
+| Mistral | Mistral Medium 3.5 | Open | modified-mit | 128B / 128B active | Dense | [Source](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) | Official Mistral release: 128B dense model, 256K context. Public downloadable checkpoint under Modified MIT; license includes extra conditions for high-revenue businesses. |
 | Mistral | Mistral Small 4 | Open | apache-2.0 | 119B / 6.5B active | MoE | [Source](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) | — |
 | OpenAI | GPT-5.4 | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | OpenAI | GPT-5.4 mini | Closed | Not verified | Not disclosed | Not disclosed | — | — |

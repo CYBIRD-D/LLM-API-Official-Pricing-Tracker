@@ -64,7 +64,7 @@ Compare standard API input, cached input, output, and combined costs across Open
 | 37 | xAI | Grok 4.7 | Closed | [≈2.1T (Musk claim)](https://x.com/elonmusk/status/2082123925283041545) | $2.00 | $0.50 | $6.00 | **$8.00** | 500K context; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
 | 38 | Qwen | Qwen3.8 Max | Open | [2.4T / 95B active](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) | $2.00 | — | $6.00 | **$8.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | 39 | Google | Gemini 3.6/3.7/3.8 Flash — Regular Price | Closed | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | Standard price from Jan 1, 2027 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
-| 40 | Mistral | Mistral Medium 3.5 | Closed | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | 256K context | [Source](https://docs.mistral.ai/models/) |
+| 40 | Mistral | Mistral Medium 3.5 | Open | [128B / 128B active](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) | $1.50 | $0.15 | $7.50 | **$9.00** | 256K context | [Source](https://docs.mistral.ai/models/) |
 | 41 | Kimi | Kimi K2.7 Code Highspeed | Closed | Not disclosed | $1.90 | $0.38 | $8.00 | **$9.90** | ~262K context | [Source](https://www.kimi.com/) |
 | 42 | Qwen | Qwen3.7 Max | Closed | Not disclosed | $2.50 | — | $7.50 | **$10.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | 43 | Google | Gemini 3.5 Flash | Closed | Not disclosed | $1.50 | $0.15 | $9.00 | **$10.50** | Thinking tokens billed as output | [Source](https://ai.google.dev/gemini-api/docs/pricing) |

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-08 — Mistral Medium 3.5 openness correction
+
+- Corrected Mistral Medium 3.5 from Closed to **Open**: Mistral publishes the matching `Mistral-Medium-3.5-128B` checkpoint. Architecture **dense 128B**; license **Modified MIT** (not standard MIT).
+- Added the official model-card source to the parameter field; the API price is unchanged.
+
 ## 2026-10-08 — Openness audit and formatting cleanup
 
 - Standardized the leaderboard to `Open / Closed` only, while retaining licensing and the evidence trail in the model catalog.
