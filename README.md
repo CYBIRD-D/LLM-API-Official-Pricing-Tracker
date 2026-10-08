@@ -1,27 +1,29 @@
-# LLM API Pricing Tracker
+# LLM API Official Pricing Tracker
 
-**A reproducible, source-linked pricing comparison for text-first language-model APIs.**
+## Last updated: **2026-10-08**
 
-![Validation](https://img.shields.io/badge/data-JSON%20validated-245b45) ![Version](https://img.shields.io/badge/status-initial%20catalog-5865c0) ![Currency](https://img.shields.io/badge/rates-USD%20%2F%201M%20tokens-blue)
+> [!IMPORTANT]
+> **All prices are in US dollars per 1 million tokens.** This is an updated reference table, not a live price feed. Some older prices still need rechecking, so click the provider's Source link before relying on a number.
 
-Compare standard API input, cached input, output, and combined costs across OpenAI, Anthropic, Google, xAI, Qwen, DeepSeek, Kimi, GLM, Mistral, and Meta/OpenRouter. Each model also has an independently maintained **Open/Closed**, **license**, and **parameter-count** record.
+Compare AI API prices from OpenAI, Anthropic, Google, xAI, Qwen, DeepSeek, Kimi, GLM, Mistral, and Meta/OpenRouter.
 
-**Data cut-off: 2026-10-08.** This initial release imports much of the pricing snapshot curated in an earlier comparison. **Not every imported rate has been independently reconfirmed today.** Individual records expose `pricing_review` (`source_checked` or `imported_from_previous_table`) and a pricing source URL for a transparent re-audit. Do not treat a source link by itself as proof that the exact amount was verified. Check official pages before significant purchases.
+## How to read the table
 
-> **GitHub Pages is intentionally deferred.** This version is README + JSON + scripts + Actions, with no website framework or published webpage. A future UI can read the same JSON.
+- **Input:** what you pay for the text you send.
+- **Cached Input:** the lower price for reused input. **—** means the price is unknown, not free.
+- **Output:** what you pay for the model's answer.
+- **Combined:** Input + Output, counting 1 million tokens of each. It's a way to rank prices, not a prediction of your bill.
+- **Open:** downloadable model files exist, or the vendor confirms a faster API option uses the same public model.
+- **Closed:** we haven't verified downloadable files for that exact version. Other open models in the same family don't automatically count.
+- **Parameters:** model size. For MoE models, we show **total / active** parameters.
 
-## Ranking methodology
+The cheapest **Combined** price comes first. Ties use the cheaper confirmed cached-input price. Promotional prices and peak/off-peak rates get separate rows.
 
-- **Combined = the cost of 1 million uncached input tokens + 1 million output tokens**, not a generic weighted average. The input/output token ratio is exactly **1:1** for this index.
-- Rows rank by Combined ascending, then by cheaper **comparable cached-input** costs. An unknown cache price (`—`) is **not** zero.
-- For tiered pricing, the lowest/default short-context tier is used in the main row; the long-context boundary is explained in Notes. Rates are in **USD per 1M tokens**.
-- Promo and regular rates are different **rate entries**, not different models. Peak/off-peak rates also remain separate. Expired promotional rates should be moved into the changelog/history when the data is maintained.
-- **Open** means the creator has released a matching public checkpoint; **Closed** means no matching checkpoint was verified yet (including announced-but-not-yet-released models). The two display labels do **not** represent OSI license status; the license is recorded separately. Hosted APIs can add functionality not in public checkpoints.
-- Parameter counts rely on official model cards/technical reports. xAI Grok figures based on Elon Musk's X posts are conspicuously marked as **unverified founder claims**, not official technical specifications. MoE total/active counts differ; unverified values stay `null`.
-- Models with exactly matching rates/conditions may share a **display row**, but each model has its own JSON object. Versions with different cache rates (e.g., Grok 4.5 vs 4.6, Sonnet 5 vs 5.5) stay separate.
+**Faster service isn't always a new model.** Kimi K2.7 Code HighSpeed is the same open model served faster for more money. GLM-5-Turbo was separately optimized during training for agent tasks; we cannot assume it uses exactly the same public files as GLM-5.
+
+More detail: [How the numbers are collected](docs/methodology.md) · [Suggest a correction](CONTRIBUTING.md)
 
 ## Price leaderboard
-
 <!-- CATALOG:START -->
 | Rank | Provider | Model | Open/Closed | Parameters (Total / Active) | Input | Cached Input | Output | Combined | Notes | Pricing source |
 |---:|---|---|---|---|---:|---:|---:|---:|---|---|
@@ -50,9 +52,9 @@ Compare standard API input, cached input, output, and combined costs across Open
 | 23 | xAI | Grok 4.20/4.3 | Closed | Not disclosed | $1.25 | $0.20 | $2.50 | **$3.75** | <200K; ≥200K: $2.50/$5 | [Source](https://docs.x.ai/developers/pricing) |
 | 24 | GLM / Z.AI | GLM-5 | Open | [744B / 40B active](https://huggingface.co/zai-org/GLM-5) | $1.00 | $0.20 | $3.20 | **$4.20** | — | [Source](https://docs.z.ai/guides/overview/pricing) |
 | 25 | Google | Gemini 3.6/3.7/3.8 Flash — Promo | Closed | Not disclosed | $0.75 | $0.075 | $3.75 | **$4.50** | Introductory price through Dec 31, 2026 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
-| 26 | Kimi | Kimi K2.6 | Closed | Not disclosed | $0.95 | $0.16 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
-| 27 | Kimi | Kimi K2.7 Code | Closed | Not disclosed | $0.95 | $0.19 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
-| 28 | GLM / Z.AI | GLM-5-Turbo | Closed | Not disclosed | $1.20 | $0.24 | $4.00 | **$5.20** | 200K context | [Source](https://docs.z.ai/guides/overview/pricing) |
+| 26 | Kimi | Kimi K2.6 | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.6) | $0.95 | $0.16 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
+| 27 | Kimi | Kimi K2.7 Code | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | $0.95 | $0.19 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
+| 28 | GLM / Z.AI | GLM-5-Turbo | Closed | Not disclosed | $1.20 | $0.24 | $4.00 | **$5.20** | 200K context; agent-tuned Turbo variant | [Source](https://docs.z.ai/guides/overview/pricing) |
 | 29 | OpenAI | GPT-5.4 mini | Closed | Not disclosed | $0.75 | $0.075 | $4.50 | **$5.25** | — | [Source](https://developers.openai.com/api/docs/pricing) |
 | 30 | DeepSeek | DeepSeek V4 Pro — Peak | Open | [1.6T / 49B active](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) | $1.32 | $0.044 | $3.96 | **$5.28** | Peak pricing | [Source](https://api-docs.deepseek.com/quick_start/pricing/) |
 | 31 | Meta / OpenRouter | Muse Spark 1.1/1.2/1.3 | Closed | Not disclosed | $1.25 | $0.15 | $4.25 | **$5.50** | 1M context; standard data policy | [Source](https://openrouter.ai/meta/muse-spark-1.3) |
@@ -65,7 +67,7 @@ Compare standard API input, cached input, output, and combined costs across Open
 | 38 | Qwen | Qwen3.8 Max | Open | [2.4T / 95B active](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) | $2.00 | — | $6.00 | **$8.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | 39 | Google | Gemini 3.6/3.7/3.8 Flash — Regular Price | Closed | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | Standard price from Jan 1, 2027 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
 | 40 | Mistral | Mistral Medium 3.5 | Open | [128B / 128B active](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) | $1.50 | $0.15 | $7.50 | **$9.00** | 256K context | [Source](https://docs.mistral.ai/models/) |
-| 41 | Kimi | Kimi K2.7 Code Highspeed | Closed | Not disclosed | $1.90 | $0.38 | $8.00 | **$9.90** | ~262K context | [Source](https://www.kimi.com/) |
+| 41 | Kimi | Kimi K2.7 Code Highspeed | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | $1.90 | $0.38 | $8.00 | **$9.90** | ~262K; same K2.7 Code model, faster output | [Source](https://www.kimi.com/) |
 | 42 | Qwen | Qwen3.7 Max | Closed | Not disclosed | $2.50 | — | $7.50 | **$10.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | 43 | Google | Gemini 3.5 Flash | Closed | Not disclosed | $1.50 | $0.15 | $9.00 | **$10.50** | Thinking tokens billed as output | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
 | 44 | Anthropic | Claude Sonnet 5.5 | Closed | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | Cache read reduced to $0.10 on Oct 7 | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
