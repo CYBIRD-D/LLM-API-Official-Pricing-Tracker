@@ -1,0 +1,32 @@
+name: Watch pricing sources
+on:
+  schedule:
+    - cron: '15 9 * * 1,4'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check selected pricing source pages
+        run: python scripts/check_sources.py --out source-report.json
+      - name: Summarize possible changes
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          report=json.load(open('source-report.json',encoding='utf8'))
+          print('## Source-page review report')
+          print('Flagged pages need human review; no prices are edited automatically.\n')
+          for r in report['results']:
+              print(f"- **{r['state']}** — {r['name']}: {r['details']}")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-watch-report
+          path: source-report.json
