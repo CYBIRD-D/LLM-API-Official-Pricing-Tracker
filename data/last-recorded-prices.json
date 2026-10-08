@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "prices": {
+    "qwen--qwen3-7-flash": {
+      "input": 0.03,
+      "cached_input": null,
+      "output": 0.13,
+      "rate_type": "standard",
+      "notes": "≤32K; 32K–256K: $0.10/$0.40; 256K–1M: $0.20/$0.80",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "meta-openrouter--muse-spark-1-2-1-3-contributor": {
+      "input": 0.1,
+      "cached_input": 0.002,
+      "output": 0.2,
+      "rate_type": "contributor",
+      "notes": "1M context; prompts/outputs may be used to improve Meta products",
+      "pricing_source": "https://openrouter.ai/meta/muse-spark-1.3-contributor"
+    },
+    "qwen--qwen3-5-flash": {
+      "input": 0.1,
+      "cached_input": null,
+      "output": 0.4,
+      "rate_type": "standard",
+      "notes": "International",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "openai--gpt-6-luna": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K: $0.20/$0.75",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-haiku-5-5": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5,
+      "rate_type": "standard",
+      "notes": "≤100K; >100K: $0.50 input / $0.05 cache / $2.50 output",
+      "pricing_source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "qwen--qwen3-8-flash": {
+      "input": 0.15,
+      "cached_input": null,
+      "output": 0.47,
+      "rate_type": "standard",
+      "notes": "International; 1M context",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "glm-z-ai--glm-5-3-flash": {
+      "input": 0.15,
+      "cached_input": 0.03,
+      "output": 0.5,
+      "rate_type": "standard",
+      "notes": "Standard price",
+      "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "deepseek--deepseek-v4-1-flash-off-peak": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6,
+      "rate_type": "off_peak",
+      "notes": "1M context; off-peak pricing",
+      "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    "mistral--mistral-small-4": {
+      "input": 0.15,
+      "cached_input": 0.015,
+      "output": 0.6,
+      "rate_type": "standard",
+      "notes": "256K context",
+      "pricing_source": "https://docs.mistral.ai/models/mistral-small-4-0-26-03"
+    },
+    "openai--gpt-5-6-luna": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.2,
+      "rate_type": "standard",
+      "notes": ">272K: $0.40/$1.80",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "meta-openrouter--muse-glimmer-30b": {
+      "input": 0.3,
+      "cached_input": 0.04,
+      "output": 1.1,
+      "rate_type": "standard",
+      "notes": "131K context",
+      "pricing_source": "https://openrouter.ai/meta/muse-glimmer-30b"
+    },
+    "openai--gpt-5-4-nano": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.25,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "deepseek--deepseek-v4-1-flash-peak": {
+      "input": 0.3,
+      "cached_input": 0.006,
+      "output": 1.2,
+      "rate_type": "peak",
+      "notes": "1M context; peak pricing",
+      "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    "qwen--qwen3-7-plus-promo": {
+      "input": 0.32,
+      "cached_input": null,
+      "output": 1.28,
+      "rate_type": "promo",
+      "notes": "International alias; 20% off; regular $0.40/$1.60",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "google--gemini-3-1-flash-lite": {
+      "input": 0.25,
+      "cached_input": 0.025,
+      "output": 1.5,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "qwen--qwen3-6-flash": {
+      "input": 0.25,
+      "cached_input": null,
+      "output": 1.5,
+      "rate_type": "standard",
+      "notes": "≤256K; International",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "qwen--qwen3-7-plus-regular-price": {
+      "input": 0.4,
+      "cached_input": null,
+      "output": 1.6,
+      "rate_type": "regular",
+      "notes": "≤256K",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "deepseek--deepseek-v4-pro-off-peak": {
+      "input": 0.66,
+      "cached_input": 0.022,
+      "output": 1.98,
+      "rate_type": "off_peak",
+      "notes": "Off-peak pricing",
+      "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    "google--gemini-3-5-flash-lite": {
+      "input": 0.3,
+      "cached_input": 0.03,
+      "output": 2.5,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "qwen--qwen3-5-plus": {
+      "input": 0.4,
+      "cached_input": null,
+      "output": 2.4,
+      "rate_type": "standard",
+      "notes": "≤256K; International",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "xai--grok-build-0-1": {
+      "input": 1,
+      "cached_input": 0.2,
+      "output": 2,
+      "rate_type": "standard",
+      "notes": "<200K; ≥200K: $2/$4",
+      "pricing_source": "https://docs.x.ai/developers/pricing"
+    },
+    "qwen--qwen3-6-plus": {
+      "input": 0.5,
+      "cached_input": null,
+      "output": 3,
+      "rate_type": "standard",
+      "notes": "≤256K; International",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "xai--grok-4-20-4-3": {
+      "input": 1.25,
+      "cached_input": 0.2,
+      "output": 2.5,
+      "rate_type": "standard",
+      "notes": "<200K; ≥200K: $2.50/$5",
+      "pricing_source": "https://docs.x.ai/developers/pricing"
+    },
+    "glm-z-ai--glm-5": {
+      "input": 1,
+      "cached_input": 0.2,
+      "output": 3.2,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "google--gemini-3-6-3-7-3-8-flash-promo": {
+      "input": 0.75,
+      "cached_input": 0.075,
+      "output": 3.75,
+      "rate_type": "promo",
+      "notes": "Introductory price through Dec 31, 2026",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "kimi--kimi-k2-6": {
+      "input": 0.95,
+      "cached_input": 0.16,
+      "output": 4,
+      "rate_type": "standard",
+      "notes": "~262K context",
+      "pricing_source": "https://www.kimi.com/"
+    },
+    "kimi--kimi-k2-7-code": {
+      "input": 0.95,
+      "cached_input": 0.19,
+      "output": 4,
+      "rate_type": "standard",
+      "notes": "~262K context",
+      "pricing_source": "https://www.kimi.com/"
+    },
+    "glm-z-ai--glm-5-turbo": {
+      "input": 1.2,
+      "cached_input": 0.24,
+      "output": 4,
+      "rate_type": "standard",
+      "notes": "200K context",
+      "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "openai--gpt-5-4-mini": {
+      "input": 0.75,
+      "cached_input": 0.075,
+      "output": 4.5,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "deepseek--deepseek-v4-pro-peak": {
+      "input": 1.32,
+      "cached_input": 0.044,
+      "output": 3.96,
+      "rate_type": "peak",
+      "notes": "Peak pricing",
+      "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    "meta-openrouter--muse-spark-1-1-1-2-1-3": {
+      "input": 1.25,
+      "cached_input": 0.15,
+      "output": 4.25,
+      "rate_type": "standard",
+      "notes": "1M context; standard data policy",
+      "pricing_source": "https://openrouter.ai/meta/muse-spark-1.3"
+    },
+    "mistral--mistral-large-4": {
+      "input": 1.36,
+      "cached_input": 0.14,
+      "output": 4.18,
+      "rate_type": "standard",
+      "notes": "1M context; public preview; regular published price",
+      "pricing_source": "https://docs.mistral.ai/models/mistral-large-4-0"
+    },
+    "glm-z-ai--glm-5-1": {
+      "input": 1.4,
+      "cached_input": 0.26,
+      "output": 4.4,
+      "rate_type": "standard",
+      "notes": "200K context",
+      "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "glm-z-ai--glm-5-2-5-3": {
+      "input": 1.4,
+      "cached_input": 0.26,
+      "output": 4.4,
+      "rate_type": "standard",
+      "notes": "1M context",
+      "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+    },
+    "xai--grok-4-7": {
+      "input": 2,
+      "cached_input": 0.5,
+      "output": 6,
+      "rate_type": "standard",
+      "notes": "500K context; ≥200K: $4/$12",
+      "pricing_source": "https://docs.x.ai/developers/pricing"
+    },
+    "qwen--qwen3-8-max": {
+      "input": 2,
+      "cached_input": null,
+      "output": 6,
+      "rate_type": "standard",
+      "notes": "International; 1M context",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "google--gemini-3-6-3-7-3-8-flash-regular-price": {
+      "input": 1.5,
+      "cached_input": 0.15,
+      "output": 7.5,
+      "rate_type": "regular",
+      "notes": "Standard price from Jan 1, 2027",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "mistral--mistral-medium-3-5": {
+      "input": 1.5,
+      "cached_input": 0.15,
+      "output": 7.5,
+      "rate_type": "standard",
+      "notes": "256K context",
+      "pricing_source": "https://docs.mistral.ai/models/"
+    },
+    "kimi--kimi-k2-7-code-highspeed": {
+      "input": 1.9,
+      "cached_input": 0.38,
+      "output": 8,
+      "rate_type": "highspeed",
+      "notes": "~262K context",
+      "pricing_source": "https://www.kimi.com/"
+    },
+    "qwen--qwen3-7-max": {
+      "input": 2.5,
+      "cached_input": null,
+      "output": 7.5,
+      "rate_type": "standard",
+      "notes": "International; 1M context",
+      "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    },
+    "google--gemini-3-5-flash": {
+      "input": 1.5,
+      "cached_input": 0.15,
+      "output": 9,
+      "rate_type": "standard",
+      "notes": "Thinking tokens billed as output",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "openai--gpt-6-1-sol": {
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K: $4/$0.20/$15",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-sonnet-5-5": {
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "Cache read reduced to $0.10 on Oct 7",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "openai--gpt-6-sol": {
+      "input": 2,
+      "cached_input": 0.2,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K: $4/$0.40/$15",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-sonnet-5": {
+      "input": 2,
+      "cached_input": 0.2,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "openai--gpt-5-6-terra": {
+      "input": 2,
+      "cached_input": 0.2,
+      "output": 12,
+      "rate_type": "standard",
+      "notes": ">272K: $4/$18",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "google--gemini-3-1-pro-preview": {
+      "input": 2,
+      "cached_input": 0.2,
+      "output": 12,
+      "rate_type": "standard",
+      "notes": "≤200K; >200K: $4/$18",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "openai--gpt-5-4": {
+      "input": 2.5,
+      "cached_input": 0.25,
+      "output": 15,
+      "rate_type": "standard",
+      "notes": ">272K long-context surcharge",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-sonnet-4-6": {
+      "input": 3,
+      "cached_input": 0.3,
+      "output": 15,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "kimi--kimi-k3": {
+      "input": 3,
+      "cached_input": 0.3,
+      "output": 15,
+      "rate_type": "standard",
+      "notes": "1M context",
+      "pricing_source": "https://www.kimi.com/"
+    },
+    "anthropic--claude-opus-5-5": {
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "standard",
+      "notes": "1M context",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "openai--gpt-5-6-sol-promo": {
+      "input": 4,
+      "cached_input": 0.4,
+      "output": 20,
+      "rate_type": "promo",
+      "notes": "Promo available at least through Nov 21, 2026; regular $5/$30",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-opus-4-7-4-8-5": {
+      "input": 5,
+      "cached_input": 0.5,
+      "output": 25,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "openai--gpt-5-5": {
+      "input": 5,
+      "cached_input": 0.5,
+      "output": 30,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "openai--gpt-5-6-sol-regular-price": {
+      "input": 5,
+      "cached_input": 0.5,
+      "output": 30,
+      "rate_type": "regular",
+      "notes": "Original price; currently $4/$20 promo",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "anthropic--claude-fable-5-1": {
+      "input": 10,
+      "cached_input": 0.25,
+      "output": 50,
+      "rate_type": "standard",
+      "notes": "1M context; low 0.025x cache-read multiplier",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "anthropic--claude-fable-5": {
+      "input": 10,
+      "cached_input": 1,
+      "output": 50,
+      "rate_type": "standard",
+      "notes": "",
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "openai--gpt-6-astra": {
+      "input": 10,
+      "cached_input": 1,
+      "output": 50,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K: $20/$2/$75",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "openai--gpt-5-4-5-5-pro": {
+      "input": 30,
+      "cached_input": null,
+      "output": 180,
+      "rate_type": "standard",
+      "notes": "Maximum-compute tier",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "xai-grok-4-5--grok-4-5": {
+      "input": 2,
+      "cached_input": 0.3,
+      "output": 6,
+      "rate_type": "standard",
+      "notes": "<200K; ≥200K: $4/$12",
+      "pricing_source": "https://docs.x.ai/developers/pricing"
+    },
+    "xai-grok-4-5--grok-4-6": {
+      "input": 2,
+      "cached_input": 0.5,
+      "output": 6,
+      "rate_type": "standard",
+      "notes": "<200K; ≥200K: $4/$12",
+      "pricing_source": "https://docs.x.ai/developers/pricing"
+    }
+  }
+}
