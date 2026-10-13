@@ -48,6 +48,14 @@
       "patterns": [
         "GLM"
       ]
+    },
+    {
+      "name": "MiniMax official API pricing",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "patterns": [
+        "MiniMax-M3",
+        "MiniMax-M2.7"
+      ]
     }
   ]
 }

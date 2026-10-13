@@ -1382,6 +1382,106 @@
       "promo_ends_on": null,
       "data_policy": "standard_or_unspecified",
       "time_tier_utc": null
+    },
+    {
+      "id": "minimax--m2-7",
+      "label": "MiniMax M2.7",
+      "model_ids": [
+        "minimax--m2-7"
+      ],
+      "input": 0.3,
+      "cached_input": 0.06,
+      "output": 1.2,
+      "rate_type": "standard",
+      "notes": "~205K context; cache write $0.375/MTok",
+      "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 0.375
+    },
+    {
+      "id": "minimax--m3-standard",
+      "label": "MiniMax M3",
+      "model_ids": [
+        "minimax--m3"
+      ],
+      "input": 0.3,
+      "cached_input": 0.06,
+      "output": 1.2,
+      "rate_type": "standard",
+      "notes": "≤512K prompt; >512K: $0.60 input / $0.12 cache / $2.40 output; permanent 50% discount",
+      "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 512001,
+          "max_prompt_tokens": 1048576,
+          "input": 0.6,
+          "cached_input": 0.12,
+          "output": 2.4
+        }
+      ],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "service_tier": "standard"
+    },
+    {
+      "id": "minimax--m3-priority",
+      "label": "MiniMax M3 — Priority",
+      "model_ids": [
+        "minimax--m3"
+      ],
+      "input": 0.45,
+      "cached_input": 0.09,
+      "output": 1.8,
+      "rate_type": "priority",
+      "notes": "≤512K prompt; faster priority serving; >512K: $0.90/$0.18/$3.60; permanent 50% discount",
+      "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 512001,
+          "max_prompt_tokens": 1048576,
+          "input": 0.9,
+          "cached_input": 0.18,
+          "output": 3.6
+        }
+      ],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "service_tier": "priority"
+    },
+    {
+      "id": "minimax--m2-7-highspeed",
+      "label": "MiniMax M2.7 Highspeed",
+      "model_ids": [
+        "minimax--m2-7-highspeed"
+      ],
+      "input": 0.6,
+      "cached_input": 0.06,
+      "output": 2.4,
+      "rate_type": "highspeed",
+      "notes": "Same open M2.7 model, faster serving; ~205K context; cache write $0.375/MTok",
+      "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 0.375
     }
   ],
   "last_updated": "2026-10-14"

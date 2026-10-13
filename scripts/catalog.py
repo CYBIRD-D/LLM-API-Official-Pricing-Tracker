@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODELS = ROOT / 'data/models.json'
 PRICING = ROOT / 'data/pricing.json'
 VALID_OPENNESS = {'Open', 'Closed'}
-VALID_RATE_TYPES = {'standard', 'promo', 'regular', 'peak', 'off_peak', 'contributor', 'highspeed'}
+VALID_RATE_TYPES = {'standard', 'promo', 'regular', 'peak', 'off_peak', 'contributor', 'highspeed', 'priority'}
 
 
 def read_json(path: Path) -> dict:

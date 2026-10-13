@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-14 — Add MiniMax M2.7 and M3
+
+- Added MiniMax **M2.7 (230B / 10B)**, **M2.7 Highspeed (same model)**, and **M3 (428B / 23B)**. All three are **Open** and linked to official downloadable model files.
+- Added four pay-as-you-go API rate rows: M2.7 $0.30/$0.06/$1.20, M3 Standard $0.30/$0.06/$1.20, M3 Priority $0.45/$0.09/$1.80, and M2.7 Highspeed $0.60/$0.06/$2.40 (input/cache read/output, USD per 1M tokens).
+- M3's permanent 50% discount is recorded as the **actual billed rate**, not as a separate expiring promotional entry. The default ≤512K prompt tier is ranked; the >512K prices are stored in `context_tiers`.
+- MiniMax M2.7 model files carry a **non-commercial license** requiring prior written authorization for commercial use. M3 has a **MiniMax Community License** with separate commercial-use conditions. `Open` denotes weight availability, not license permissiveness.
+- Added the provider's official pricing page to the scheduled source watcher. No existing provider prices were changed.
+
 ## 2026-10-14 — Gemini 4 Argon and Muse Wonder
 
 - Added Google **Gemini 4 Argon** (GA October 13): promo $2 input / $0.10 cached / $10 output through November 30; regular $4 / $0.20 / $20 beginning December 1. Google says caching is implicit only.

@@ -100,6 +100,27 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(len(self.models), 69)
         self.assertEqual(len(self.rates), 63)
 
+    def test_minimax_open_and_rates(self):
+        for mid in ('minimax--m2-7', 'minimax--m2-7-highspeed', 'minimax--m3'):
+            self.assertEqual(self.models[mid]['openness'], 'Open')
+        self.assertEqual(self.models['minimax--m2-7']['total_parameters_b'], 230)
+        self.assertEqual(self.models['minimax--m2-7']['active_parameters_b'], 10)
+        self.assertEqual(self.models['minimax--m3']['total_parameters_b'], 428)
+        self.assertEqual(self.models['minimax--m3']['active_parameters_b'], 23)
+        self.assertEqual(self.models['minimax--m2-7-highspeed']['hosted_variant_of'], 'minimax--m2-7')
+        rows = {p['id']: p for p in self.rates}
+        self.assertEqual(rows['minimax--m3-standard']['input'], 0.30)
+        self.assertEqual(rows['minimax--m3-standard']['cached_input'], 0.06)
+        self.assertEqual(rows['minimax--m3-priority']['output'], 1.80)
+        self.assertEqual(rows['minimax--m3-priority']['context_tiers'][0]['input'], 0.90)
+        self.assertEqual(rows['minimax--m2-7-highspeed']['cached_input'], 0.06)
+        self.assertEqual(rows['minimax--m2-7-highspeed']['cache_write'], 0.375)
+        self.assertEqual(len(self.models), 72)
+        self.assertEqual(len(self.rates), 67)
+        tab=make_table()
+        self.assertIn('| MiniMax | MiniMax M3 | Open |', tab)
+        self.assertIn('| MiniMax | MiniMax M3 — Priority | Open |', tab)
+
     def test_table_row_count(self):
         table=make_table()
         self.assertEqual(len(table.splitlines()),len(self.rates)+2)

@@ -140,6 +140,62 @@
         "pricing_source": "https://dev.meta.ai/models/muse-wonder"
       },
       "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T20:15:52Z",
+      "price_id": "minimax--m2-7",
+      "old": null,
+      "new": {
+        "input": 0.3,
+        "cached_input": 0.06,
+        "output": 1.2,
+        "rate_type": "standard",
+        "notes": "~205K context; cache write $0.375/MTok",
+        "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T20:15:52Z",
+      "price_id": "minimax--m2-7-highspeed",
+      "old": null,
+      "new": {
+        "input": 0.6,
+        "cached_input": 0.06,
+        "output": 2.4,
+        "rate_type": "highspeed",
+        "notes": "Same open M2.7 model, faster serving; ~205K context; cache write $0.375/MTok",
+        "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T20:15:52Z",
+      "price_id": "minimax--m3-priority",
+      "old": null,
+      "new": {
+        "input": 0.45,
+        "cached_input": 0.09,
+        "output": 1.8,
+        "rate_type": "priority",
+        "notes": "≤512K prompt; faster priority serving; >512K: $0.90/$0.18/$3.60; permanent 50% discount",
+        "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T20:15:52Z",
+      "price_id": "minimax--m3-standard",
+      "old": null,
+      "new": {
+        "input": 0.3,
+        "cached_input": 0.06,
+        "output": 1.2,
+        "rate_type": "standard",
+        "notes": "≤512K prompt; >512K: $0.60 input / $0.12 cache / $2.40 output; permanent 50% discount",
+        "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
     }
   ]
 }
