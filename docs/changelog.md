@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-14 — Gemini 4 Argon and Muse Wonder
+
+- Added Google **Gemini 4 Argon** (GA October 13): promo $2 input / $0.10 cached / $10 output through November 30; regular $4 / $0.20 / $20 beginning December 1. Google says caching is implicit only.
+- Added Meta **Muse Wonder** (October 12): $4 input / $0.20 cached / $20 output, 1M context, model ID `muse-wonder-1.0`.
+- Added **Muse Wonder Full** to the model catalog only; Meta makes it available via Muse Code subscription rather than a publicly priced per-token API.
+- Both Wonder versions and Argon are **Closed**, with parameter counts undisclosed.
+- Marked Gemini 3.5 Flash and 3.7 Flash deprecated as of October 8, with routing to 3.6 and 3.8 respectively. Removed historical 3.5 Flash rate from the active leaderboard; adjusted the 3.6/3.8 shared Flash rate rows. Changes are preserved in the local price-change history.
+- Updated README to October 14, 2026; left unrelated model prices unchanged.
+
 ## 2026-10-08 — Kimi models, faster API tiers and README clarity
 
 - Kimi K2.6 and Kimi K2.7 Code are **Open**, with official model files, 1T total / 32B active parameters, and Modified MIT licenses.

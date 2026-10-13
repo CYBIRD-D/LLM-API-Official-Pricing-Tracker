@@ -198,7 +198,7 @@
       "cached_input": 0.075,
       "output": 3.75,
       "rate_type": "promo",
-      "notes": "Introductory price through Dec 31, 2026",
+      "notes": "Introductory price through Dec 31, 2026; 3.7 retired (redirects to 3.8)",
       "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
     },
     "kimi--kimi-k2-6": {
@@ -222,7 +222,7 @@
       "cached_input": 0.24,
       "output": 4,
       "rate_type": "standard",
-      "notes": "200K context",
+      "notes": "200K context; agent-tuned Turbo variant",
       "pricing_source": "https://docs.z.ai/guides/overview/pricing"
     },
     "openai--gpt-5-4-mini": {
@@ -294,7 +294,7 @@
       "cached_input": 0.15,
       "output": 7.5,
       "rate_type": "regular",
-      "notes": "Standard price from Jan 1, 2027",
+      "notes": "Standard price from Jan 1, 2027; 3.7 retired (redirects to 3.8)",
       "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
     },
     "mistral--mistral-medium-3-5": {
@@ -310,7 +310,7 @@
       "cached_input": 0.38,
       "output": 8,
       "rate_type": "highspeed",
-      "notes": "~262K context",
+      "notes": "~262K; same K2.7 Code model, faster output",
       "pricing_source": "https://www.kimi.com/"
     },
     "qwen--qwen3-7-max": {
@@ -320,14 +320,6 @@
       "rate_type": "standard",
       "notes": "International; 1M context",
       "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
-    },
-    "google--gemini-3-5-flash": {
-      "input": 1.5,
-      "cached_input": 0.15,
-      "output": 9,
-      "rate_type": "standard",
-      "notes": "Thinking tokens billed as output",
-      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
     },
     "openai--gpt-6-1-sol": {
       "input": 2,
@@ -488,6 +480,30 @@
       "rate_type": "standard",
       "notes": "<200K; ≥200K: $4/$12",
       "pricing_source": "https://docs.x.ai/developers/pricing"
+    },
+    "google--gemini-4-argon-promo": {
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "rate_type": "promo",
+      "notes": "1M context; implicit caching only; offer through Nov 30, 2026",
+      "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+    },
+    "google--gemini-4-argon-regular": {
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "regular",
+      "notes": "1M context; implicit caching only; from Dec 1, 2026",
+      "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+    },
+    "meta--muse-wonder-1-0": {
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "standard",
+      "notes": "1M context; Meta Model API / OpenRouter; Wonder Full is subscription-only",
+      "pricing_source": "https://dev.meta.ai/models/muse-wonder"
     }
   }
 }

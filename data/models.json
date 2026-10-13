@@ -394,7 +394,7 @@
       "parameter_source": null,
       "parameter_notes": null,
       "metadata_verified_at": null,
-      "api_model_id": null,
+      "api_model_id": "gemini-3.6-flash",
       "api_status": "active_or_unspecified",
       "openness": "Closed"
     },
@@ -407,11 +407,14 @@
       "active_parameters_b": null,
       "architecture": null,
       "parameter_source": null,
-      "parameter_notes": null,
+      "parameter_notes": "Deprecated October 8, 2026. API calls automatically route to gemini-3.8-flash; no longer a separately selectable model.",
       "metadata_verified_at": null,
-      "api_model_id": null,
-      "api_status": "active_or_unspecified",
-      "openness": "Closed"
+      "api_model_id": "gemini-3.7-flash",
+      "api_status": "deprecated",
+      "openness": "Closed",
+      "redirects_to": "gemini-3.8-flash",
+      "deprecated_on": "2026-10-08",
+      "status_source": "https://ai.google.dev/gemini-api/docs/changelog"
     },
     {
       "id": "google--gemini-3-8-flash",
@@ -424,7 +427,7 @@
       "parameter_source": null,
       "parameter_notes": null,
       "metadata_verified_at": null,
-      "api_model_id": null,
+      "api_model_id": "gemini-3.8-flash",
       "api_status": "active_or_unspecified",
       "openness": "Closed"
     },
@@ -736,11 +739,14 @@
       "active_parameters_b": null,
       "architecture": null,
       "parameter_source": null,
-      "parameter_notes": null,
+      "parameter_notes": "Deprecated October 8, 2026. API calls automatically route to gemini-3.6-flash; no longer a separately selectable model.",
       "metadata_verified_at": null,
-      "api_model_id": null,
-      "api_status": "active_or_unspecified",
-      "openness": "Closed"
+      "api_model_id": "gemini-3.5-flash",
+      "api_status": "deprecated",
+      "openness": "Closed",
+      "redirects_to": "gemini-3.6-flash",
+      "deprecated_on": "2026-10-08",
+      "status_source": "https://ai.google.dev/gemini-api/docs/changelog"
     },
     {
       "id": "openai--gpt-6-1-sol",
@@ -1041,6 +1047,60 @@
       "api_model_id": null,
       "api_status": "active_or_unspecified",
       "openness": "Closed"
+    },
+    {
+      "id": "google--gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "provider": "Google",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": "Sparse MoE",
+      "parameter_source": null,
+      "parameter_notes": "Google confirms a Sparse MoE design but has not disclosed total or activated parameters.",
+      "metadata_verified_at": "2026-10-14",
+      "api_model_id": "gemini-4-argon",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "No downloadable Gemini 4 Argon model files published.",
+      "openness_source": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "release_date": "2026-10-13"
+    },
+    {
+      "id": "meta--muse-wonder-1-0",
+      "name": "Muse Wonder",
+      "provider": "Meta",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "1M context. Standard Meta Model API and OpenRouter availability. Parameter counts undisclosed.",
+      "metadata_verified_at": "2026-10-14",
+      "api_model_id": "muse-wonder-1.0",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "Public API, but no downloadable model checkpoint verified.",
+      "openness_source": "https://dev.meta.ai/models/muse-wonder",
+      "release_date": "2026-10-12"
+    },
+    {
+      "id": "meta--muse-wonder-full-1-0",
+      "name": "Muse Wonder Full",
+      "provider": "Meta",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "1M context. Muse Code Power or Maximum Usage subscription only; no public per-token API price.",
+      "metadata_verified_at": "2026-10-14",
+      "api_model_id": "muse-wonder-full-1.0",
+      "api_status": "subscription_only",
+      "openness": "Closed",
+      "openness_note": "Subscription-only Muse Code offering. No public downloadable checkpoint verified.",
+      "openness_source": "https://dev.meta.ai/models/muse-wonder",
+      "release_date": "2026-10-12"
     }
   ]
 }

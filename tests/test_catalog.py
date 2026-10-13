@@ -79,8 +79,26 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-10-08**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-10-14**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
+
+    def test_new_models_and_deprecation(self):
+        rows = {r['id']: r for r in self.rates}
+        self.assertEqual(self.models['google--gemini-4-argon']['openness'], 'Closed')
+        self.assertEqual(self.models['meta--muse-wonder-1-0']['openness'], 'Closed')
+        self.assertEqual(self.models['meta--muse-wonder-full-1-0']['api_status'], 'subscription_only')
+        self.assertNotIn('meta--muse-wonder-full-1-0', [mid for r in self.rates for mid in r['model_ids']])
+        self.assertEqual(rows['google--gemini-4-argon-promo']['input'], 2.0)
+        self.assertEqual(rows['google--gemini-4-argon-promo']['output'], 10.0)
+        self.assertEqual(rows['google--gemini-4-argon-promo']['promo_ends_on'], '2026-11-30')
+        self.assertEqual(rows['google--gemini-4-argon-regular']['effective_from'], '2026-12-01')
+        self.assertEqual(rows['meta--muse-wonder-1-0']['cached_input'], 0.20)
+        self.assertNotIn('google--gemini-3-5-flash', rows)
+        self.assertEqual(self.models['google--gemini-3-7-flash']['redirects_to'], 'gemini-3.8-flash')
+        self.assertEqual(self.models['google--gemini-3-5-flash']['redirects_to'], 'gemini-3.6-flash')
+        self.assertNotIn('google--gemini-3-7-flash', rows['google--gemini-3-6-3-7-3-8-flash-promo']['model_ids'])
+        self.assertEqual(len(self.models), 69)
+        self.assertEqual(len(self.rates), 63)
 
     def test_table_row_count(self):
         table=make_table()

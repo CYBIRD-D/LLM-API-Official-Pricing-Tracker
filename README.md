@@ -1,6 +1,6 @@
 # LLM API Official Pricing Tracker
 
-## Last updated: **2026-10-08**
+## Last updated: **2026-10-14**
 
 > [!IMPORTANT]
 > **All prices are in US dollars per 1 million tokens.** This is an updated reference table, not a live price feed. Some older prices still need rechecking, so click the provider's Source link before relying on a number.
@@ -17,7 +17,9 @@ Compare AI API prices from OpenAI, Anthropic, Google, xAI, Qwen, DeepSeek, Kimi,
 - **Closed:** we haven't verified downloadable files for that exact version. Other open models in the same family don't automatically count.
 - **Parameters:** model size. For MoE models, we show **total / active** parameters.
 
-The cheapest **Combined** price comes first. Ties use the cheaper confirmed cached-input price. Promotional prices and peak/off-peak rates get separate rows.
+The cheapest **Combined** price comes first. Ties use the cheaper confirmed cached-input price. Promotional and regular prices (including future prices), plus peak/off-peak rates, get separate rows.
+
+**Google update:** Gemini 3.5 Flash and 3.7 Flash were deprecated on October 8, 2026. Requests to those names now use Gemini 3.6 Flash and 3.8 Flash respectively, so the old standalone prices are no longer ranked. They remain documented in the model catalog.
 
 **Faster service isn't always a new model.** Kimi K2.7 Code HighSpeed is the same open model served faster for more money. GLM-5-Turbo was separately optimized during training for agent tasks; we cannot assume it uses exactly the same public files as GLM-5.
 
@@ -51,7 +53,7 @@ More detail: [How the numbers are collected](docs/methodology.md) · [Suggest a 
 | 22 | Qwen | Qwen3.6 Plus | Closed | Not disclosed | $0.50 | — | $3.00 | **$3.50** | ≤256K; International | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | 23 | xAI | Grok 4.20/4.3 | Closed | Not disclosed | $1.25 | $0.20 | $2.50 | **$3.75** | <200K; ≥200K: $2.50/$5 | [Source](https://docs.x.ai/developers/pricing) |
 | 24 | GLM / Z.AI | GLM-5 | Open | [744B / 40B active](https://huggingface.co/zai-org/GLM-5) | $1.00 | $0.20 | $3.20 | **$4.20** | — | [Source](https://docs.z.ai/guides/overview/pricing) |
-| 25 | Google | Gemini 3.6/3.7/3.8 Flash — Promo | Closed | Not disclosed | $0.75 | $0.075 | $3.75 | **$4.50** | Introductory price through Dec 31, 2026 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 25 | Google | Gemini 3.6/3.8 Flash — Promo | Closed | Not disclosed | $0.75 | $0.075 | $3.75 | **$4.50** | Introductory price through Dec 31, 2026; 3.7 retired (redirects to 3.8) | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
 | 26 | Kimi | Kimi K2.6 | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.6) | $0.95 | $0.16 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
 | 27 | Kimi | Kimi K2.7 Code | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | $0.95 | $0.19 | $4.00 | **$4.95** | ~262K context | [Source](https://www.kimi.com/) |
 | 28 | GLM / Z.AI | GLM-5-Turbo | Closed | Not disclosed | $1.20 | $0.24 | $4.00 | **$5.20** | 200K context; agent-tuned Turbo variant | [Source](https://docs.z.ai/guides/overview/pricing) |
@@ -65,12 +67,12 @@ More detail: [How the numbers are collected](docs/methodology.md) · [Suggest a 
 | 36 | xAI | Grok 4.6 | Closed | [≈1.5T (Musk claim)](https://x.com/elonmusk/status/2082123925283041545) | $2.00 | $0.50 | $6.00 | **$8.00** | <200K; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
 | 37 | xAI | Grok 4.7 | Closed | [≈2.1T (Musk claim)](https://x.com/elonmusk/status/2082123925283041545) | $2.00 | $0.50 | $6.00 | **$8.00** | 500K context; ≥200K: $4/$12 | [Source](https://docs.x.ai/developers/pricing) |
 | 38 | Qwen | Qwen3.8 Max | Open | [2.4T / 95B active](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) | $2.00 | — | $6.00 | **$8.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
-| 39 | Google | Gemini 3.6/3.7/3.8 Flash — Regular Price | Closed | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | Standard price from Jan 1, 2027 | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
+| 39 | Google | Gemini 3.6/3.8 Flash — Regular Price | Closed | Not disclosed | $1.50 | $0.15 | $7.50 | **$9.00** | Standard price from Jan 1, 2027; 3.7 retired (redirects to 3.8) | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
 | 40 | Mistral | Mistral Medium 3.5 | Open | [128B / 128B active](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) | $1.50 | $0.15 | $7.50 | **$9.00** | 256K context | [Source](https://docs.mistral.ai/models/) |
 | 41 | Kimi | Kimi K2.7 Code Highspeed | Open | [1T / 32B active](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | $1.90 | $0.38 | $8.00 | **$9.90** | ~262K; same K2.7 Code model, faster output | [Source](https://www.kimi.com/) |
 | 42 | Qwen | Qwen3.7 Max | Closed | Not disclosed | $2.50 | — | $7.50 | **$10.00** | International; 1M context | [Source](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
-| 43 | Google | Gemini 3.5 Flash | Closed | Not disclosed | $1.50 | $0.15 | $9.00 | **$10.50** | Thinking tokens billed as output | [Source](https://ai.google.dev/gemini-api/docs/pricing) |
-| 44 | Anthropic | Claude Sonnet 5.5 | Closed | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | Cache read reduced to $0.10 on Oct 7 | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 43 | Anthropic | Claude Sonnet 5.5 | Closed | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | Cache read reduced to $0.10 on Oct 7 | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 44 | Google | Gemini 4 Argon — Promo | Closed | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | 1M context; implicit caching only; offer through Nov 30, 2026 | [Source](https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud) |
 | 45 | OpenAI | GPT-6.1 Sol | Closed | Not disclosed | $2.00 | $0.10 | $10.00 | **$12.00** | 1.05M context; >272K: $4/$0.20/$15 | [Source](https://developers.openai.com/api/docs/pricing) |
 | 46 | Anthropic | Claude Sonnet 5 | Closed | Not disclosed | $2.00 | $0.20 | $10.00 | **$12.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
 | 47 | OpenAI | GPT-6 Sol | Closed | Not disclosed | $2.00 | $0.20 | $10.00 | **$12.00** | 1.05M context; >272K: $4/$0.40/$15 | [Source](https://developers.openai.com/api/docs/pricing) |
@@ -80,14 +82,16 @@ More detail: [How the numbers are collected](docs/methodology.md) · [Suggest a 
 | 51 | Anthropic | Claude Sonnet 4.6 | Closed | Not disclosed | $3.00 | $0.30 | $15.00 | **$18.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
 | 52 | Kimi | Kimi K3 | Open | [2.8T / 104B active](https://huggingface.co/moonshotai/Kimi-K3) | $3.00 | $0.30 | $15.00 | **$18.00** | 1M context | [Source](https://www.kimi.com/) |
 | 53 | Anthropic | Claude Opus 5.5 | Closed | Not disclosed | $4.00 | $0.20 | $20.00 | **$24.00** | 1M context | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
-| 54 | OpenAI | GPT-5.6 Sol — Promo | Closed | Not disclosed | $4.00 | $0.40 | $20.00 | **$24.00** | Promo available at least through Nov 21, 2026; regular $5/$30 | [Source](https://developers.openai.com/api/docs/pricing) |
-| 55 | Anthropic | Claude Opus 4.7/4.8/5 | Closed | Not disclosed | $5.00 | $0.50 | $25.00 | **$30.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
-| 56 | OpenAI | GPT-5.5 | Closed | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | — | [Source](https://developers.openai.com/api/docs/pricing) |
-| 57 | OpenAI | GPT-5.6 Sol — Regular Price | Closed | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | Original price; currently $4/$20 promo | [Source](https://developers.openai.com/api/docs/pricing) |
-| 58 | Anthropic | Claude Fable 5.1 | Closed | Not disclosed | $10.00 | $0.25 | $50.00 | **$60.00** | 1M context; low 0.025x cache-read multiplier | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
-| 59 | Anthropic | Claude Fable 5 | Closed | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
-| 60 | OpenAI | GPT-6 Astra | Closed | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | 1.05M context; >272K: $20/$2/$75 | [Source](https://developers.openai.com/api/docs/pricing) |
-| 61 | OpenAI | GPT-5.4/5.5 Pro | Closed | Not disclosed | $30.00 | — | $180.00 | **$210.00** | Maximum-compute tier | [Source](https://developers.openai.com/api/docs/pricing) |
+| 54 | Google | Gemini 4 Argon — Regular Price | Closed | Not disclosed | $4.00 | $0.20 | $20.00 | **$24.00** | 1M context; implicit caching only; from Dec 1, 2026 | [Source](https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud) |
+| 55 | Meta | Muse Wonder | Closed | Not disclosed | $4.00 | $0.20 | $20.00 | **$24.00** | 1M context; Meta Model API / OpenRouter; Wonder Full is subscription-only | [Source](https://dev.meta.ai/models/muse-wonder) |
+| 56 | OpenAI | GPT-5.6 Sol — Promo | Closed | Not disclosed | $4.00 | $0.40 | $20.00 | **$24.00** | Promo available at least through Nov 21, 2026; regular $5/$30 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 57 | Anthropic | Claude Opus 4.7/4.8/5 | Closed | Not disclosed | $5.00 | $0.50 | $25.00 | **$30.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 58 | OpenAI | GPT-5.5 | Closed | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | — | [Source](https://developers.openai.com/api/docs/pricing) |
+| 59 | OpenAI | GPT-5.6 Sol — Regular Price | Closed | Not disclosed | $5.00 | $0.50 | $30.00 | **$35.00** | Original price; currently $4/$20 promo | [Source](https://developers.openai.com/api/docs/pricing) |
+| 60 | Anthropic | Claude Fable 5.1 | Closed | Not disclosed | $10.00 | $0.25 | $50.00 | **$60.00** | 1M context; low 0.025x cache-read multiplier | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 61 | Anthropic | Claude Fable 5 | Closed | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | — | [Source](https://platform.claude.com/docs/en/about-claude/pricing) |
+| 62 | OpenAI | GPT-6 Astra | Closed | Not disclosed | $10.00 | $1.00 | $50.00 | **$60.00** | 1.05M context; >272K: $20/$2/$75 | [Source](https://developers.openai.com/api/docs/pricing) |
+| 63 | OpenAI | GPT-5.4/5.5 Pro | Closed | Not disclosed | $30.00 | — | $180.00 | **$210.00** | Maximum-compute tier | [Source](https://developers.openai.com/api/docs/pricing) |
 <!-- CATALOG:END -->
 
 ## Use the repository

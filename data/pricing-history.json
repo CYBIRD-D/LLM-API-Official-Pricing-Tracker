@@ -1,4 +1,145 @@
 {
   "schema_version": 1,
-  "events": []
+  "events": [
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "glm-z-ai--glm-5-turbo",
+      "old": {
+        "input": 1.2,
+        "cached_input": 0.24,
+        "output": 4,
+        "rate_type": "standard",
+        "notes": "200K context",
+        "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+      },
+      "new": {
+        "input": 1.2,
+        "cached_input": 0.24,
+        "output": 4,
+        "rate_type": "standard",
+        "notes": "200K context; agent-tuned Turbo variant",
+        "pricing_source": "https://docs.z.ai/guides/overview/pricing"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "google--gemini-3-5-flash",
+      "old": {
+        "input": 1.5,
+        "cached_input": 0.15,
+        "output": 9,
+        "rate_type": "standard",
+        "notes": "Thinking tokens billed as output",
+        "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "new": null,
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "google--gemini-3-6-3-7-3-8-flash-promo",
+      "old": {
+        "input": 0.75,
+        "cached_input": 0.075,
+        "output": 3.75,
+        "rate_type": "promo",
+        "notes": "Introductory price through Dec 31, 2026",
+        "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "new": {
+        "input": 0.75,
+        "cached_input": 0.075,
+        "output": 3.75,
+        "rate_type": "promo",
+        "notes": "Introductory price through Dec 31, 2026; 3.7 retired (redirects to 3.8)",
+        "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "google--gemini-3-6-3-7-3-8-flash-regular-price",
+      "old": {
+        "input": 1.5,
+        "cached_input": 0.15,
+        "output": 7.5,
+        "rate_type": "regular",
+        "notes": "Standard price from Jan 1, 2027",
+        "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "new": {
+        "input": 1.5,
+        "cached_input": 0.15,
+        "output": 7.5,
+        "rate_type": "regular",
+        "notes": "Standard price from Jan 1, 2027; 3.7 retired (redirects to 3.8)",
+        "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "google--gemini-4-argon-promo",
+      "old": null,
+      "new": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10,
+        "rate_type": "promo",
+        "notes": "1M context; implicit caching only; offer through Nov 30, 2026",
+        "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "google--gemini-4-argon-regular",
+      "old": null,
+      "new": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20,
+        "rate_type": "regular",
+        "notes": "1M context; implicit caching only; from Dec 1, 2026",
+        "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "kimi--kimi-k2-7-code-highspeed",
+      "old": {
+        "input": 1.9,
+        "cached_input": 0.38,
+        "output": 8,
+        "rate_type": "highspeed",
+        "notes": "~262K context",
+        "pricing_source": "https://www.kimi.com/"
+      },
+      "new": {
+        "input": 1.9,
+        "cached_input": 0.38,
+        "output": 8,
+        "rate_type": "highspeed",
+        "notes": "~262K; same K2.7 Code model, faster output",
+        "pricing_source": "https://www.kimi.com/"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-13T17:43:56Z",
+      "price_id": "meta--muse-wonder-1-0",
+      "old": null,
+      "new": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20,
+        "rate_type": "standard",
+        "notes": "1M context; Meta Model API / OpenRouter; Wonder Full is subscription-only",
+        "pricing_source": "https://dev.meta.ai/models/muse-wonder"
+      },
+      "note": "Local catalog change only; not a vendor announcement date."
+    }
+  ]
 }

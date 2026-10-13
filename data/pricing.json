@@ -548,17 +548,16 @@
     },
     {
       "id": "google--gemini-3-6-3-7-3-8-flash-promo",
-      "label": "Gemini 3.6/3.7/3.8 Flash — Promo",
+      "label": "Gemini 3.6/3.8 Flash — Promo",
       "model_ids": [
         "google--gemini-3-6-flash",
-        "google--gemini-3-7-flash",
         "google--gemini-3-8-flash"
       ],
       "input": 0.75,
       "cached_input": 0.075,
       "output": 3.75,
       "rate_type": "promo",
-      "notes": "Introductory price through Dec 31, 2026",
+      "notes": "Introductory price through Dec 31, 2026; 3.7 retired (redirects to 3.8)",
       "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
       "pricing_verified_at": null,
       "pricing_review": "imported_from_previous_table",
@@ -800,17 +799,16 @@
     },
     {
       "id": "google--gemini-3-6-3-7-3-8-flash-regular-price",
-      "label": "Gemini 3.6/3.7/3.8 Flash — Regular Price",
+      "label": "Gemini 3.6/3.8 Flash — Regular Price",
       "model_ids": [
         "google--gemini-3-6-flash",
-        "google--gemini-3-7-flash",
         "google--gemini-3-8-flash"
       ],
       "input": 1.5,
       "cached_input": 0.15,
       "output": 7.5,
       "rate_type": "regular",
-      "notes": "Standard price from Jan 1, 2027",
+      "notes": "Standard price from Jan 1, 2027; 3.7 retired (redirects to 3.8)",
       "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
       "pricing_verified_at": null,
       "pricing_review": "imported_from_previous_table",
@@ -873,26 +871,6 @@
       "rate_type": "standard",
       "notes": "International; 1M context",
       "pricing_source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
-      "pricing_verified_at": null,
-      "pricing_review": "imported_from_previous_table",
-      "context_tiers": [],
-      "promo_guaranteed_through": null,
-      "promo_ends_on": null,
-      "data_policy": "standard_or_unspecified",
-      "time_tier_utc": null
-    },
-    {
-      "id": "google--gemini-3-5-flash",
-      "label": "Gemini 3.5 Flash",
-      "model_ids": [
-        "google--gemini-3-5-flash"
-      ],
-      "input": 1.5,
-      "cached_input": 0.15,
-      "output": 9,
-      "rate_type": "standard",
-      "notes": "Thinking tokens billed as output",
-      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
       "pricing_verified_at": null,
       "pricing_review": "imported_from_previous_table",
       "context_tiers": [],
@@ -1343,6 +1321,68 @@
       "promo_ends_on": null,
       "data_policy": "standard_or_unspecified",
       "time_tier_utc": null
+    },
+    {
+      "id": "google--gemini-4-argon-promo",
+      "label": "Gemini 4 Argon — Promo",
+      "model_ids": [
+        "google--gemini-4-argon"
+      ],
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "rate_type": "promo",
+      "notes": "1M context; implicit caching only; offer through Nov 30, 2026",
+      "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": "2026-11-30",
+      "promo_ends_on": "2026-11-30",
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null
+    },
+    {
+      "id": "google--gemini-4-argon-regular",
+      "label": "Gemini 4 Argon — Regular Price",
+      "model_ids": [
+        "google--gemini-4-argon"
+      ],
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "regular",
+      "notes": "1M context; implicit caching only; from Dec 1, 2026",
+      "pricing_source": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "effective_from": "2026-12-01"
+    },
+    {
+      "id": "meta--muse-wonder-1-0",
+      "label": "Muse Wonder",
+      "model_ids": [
+        "meta--muse-wonder-1-0"
+      ],
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "standard",
+      "notes": "1M context; Meta Model API / OpenRouter; Wonder Full is subscription-only",
+      "pricing_source": "https://dev.meta.ai/models/muse-wonder",
+      "pricing_verified_at": "2026-10-14",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null
     }
-  ]
+  ],
+  "last_updated": "2026-10-14"
 }

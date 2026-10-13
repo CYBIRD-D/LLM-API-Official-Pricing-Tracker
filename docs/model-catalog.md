@@ -24,15 +24,18 @@ Generated from [`data/models.json`](../data/models.json). **Open** = matching do
 | GLM / Z.AI | GLM-5.3-Flash | Open | mit | 320B / 18B active | MoE | [Source](https://huggingface.co/zai-org/GLM-5.3-Flash) | Public model; 320B / 18B active according to official card. |
 | Google | Gemini 3.1 Flash-Lite | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Google | Gemini 3.1 Pro Preview | Closed | Not verified | Not disclosed | Not disclosed | — | — |
-| Google | Gemini 3.5 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
+| Google | Gemini 3.5 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | Deprecated October 8, 2026. API calls automatically route to gemini-3.6-flash; no longer a separately selectable model. |
 | Google | Gemini 3.5 Flash-Lite | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Google | Gemini 3.6 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
-| Google | Gemini 3.7 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
+| Google | Gemini 3.7 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | Deprecated October 8, 2026. API calls automatically route to gemini-3.8-flash; no longer a separately selectable model. |
 | Google | Gemini 3.8 Flash | Closed | Not verified | Not disclosed | Not disclosed | — | — |
+| Google | Gemini 4 Argon | Closed | Not verified | Not disclosed | Sparse MoE | — | Google confirms a Sparse MoE design but has not disclosed total or activated parameters.; No downloadable Gemini 4 Argon model files published. |
 | Kimi | Kimi K2.6 | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.6) | Official Kimi K2.6 checkpoint: 1T total / 32B active. |
 | Kimi | Kimi K2.7 Code | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | Official Kimi K2.7 Code checkpoint: 1T total / 32B active. |
 | Kimi | Kimi K2.7 Code Highspeed | Open | modified-mit | 1T / 32B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K2.7-Code) | Kimi confirms HighSpeed is the same K2.7 Code model, served roughly 5–6× faster (https://www.kimi.com/code/docs/en/kimi-code/whats-new.html). |
 | Kimi | Kimi K3 | Open | kimi-k3 | 2.8T / 104B active | MoE | [Source](https://huggingface.co/moonshotai/Kimi-K3) | — |
+| Meta | Muse Wonder | Closed | Not verified | Not disclosed | Not disclosed | — | 1M context. Standard Meta Model API and OpenRouter availability. Parameter counts undisclosed.; Public API, but no downloadable model checkpoint verified. |
+| Meta | Muse Wonder Full | Closed | Not verified | Not disclosed | Not disclosed | — | 1M context. Muse Code Power or Maximum Usage subscription only; no public per-token API price.; Subscription-only Muse Code offering. No public downloadable checkpoint verified. |
 | Meta / OpenRouter | Muse Glimmer 30B | Open | Not verified | 30B | Dense | [Source](https://openrouter.ai/meta/muse-glimmer-30b) | — |
 | Meta / OpenRouter | Muse Spark 1.1 | Closed | Not verified | Not disclosed | Not disclosed | — | — |
 | Meta / OpenRouter | Muse Spark 1.2 | Closed | Not verified | Not disclosed | Not disclosed | — | — |

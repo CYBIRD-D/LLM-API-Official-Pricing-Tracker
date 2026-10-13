@@ -56,3 +56,11 @@ Prefer primary API pricing pages, then official model announcements/model cards,
 ## 5. GitHub Actions limits
 
 `validate.yml` automatically proves JSON consistency and README determinism, **not** vendor price accuracy. `source-watch.yml` polls chosen vendor pages and uploads a report. A missing expected term is a **possible update / rendering change**, not proof of a pricing change; no automatic price rewrites are performed. To safely implement automatic extraction later, add provider-specific parsers and independent pricing fixtures/tests.
+
+## New model additions — 2026-10-14
+
+**Gemini 4 Argon:** GA since October 13. The [Google Cloud announcement](https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud) confirms $2 input and $10 output per million tokens through November 30, 2026, then $4/$20 from December 1, with a 95% cached-input discount in both cases. The [model page](https://ai.google.dev/gemini-api/docs/models/gemini-4-argon) specifies implicit prompt caching only. This is one underlying model with two time-dependent rate entries, not two different models. It is Closed; total/active parameters are not disclosed.
+
+**Muse Wonder:** Meta's [official model page](https://dev.meta.ai/models/muse-wonder) confirms 1M context, $4 input, $0.20 cached input, $20 output per million tokens, and API model ID `muse-wonder-1.0`. **Muse Wonder Full** is a separate subscription-only Muse Code offering (`muse-wonder-full-1.0`) with no published per-token API tariff, so it is listed in the model catalog but omitted from the paid API ranking. Both are Closed; parameter counts have not been disclosed.
+
+**Deprecated Gemini aliases:** Google's [October 8 changelog](https://ai.google.dev/gemini-api/docs/changelog) confirms `gemini-3.5-flash` requests route to `gemini-3.6-flash`, and `gemini-3.7-flash` requests route to `gemini-3.8-flash`. Neither name is ranked as a separately priced active model. Both remain in `data/models.json` for reference. Changes to their previous rate records are logged as *local catalog edits*, not claims about Google's historical invoice events.
