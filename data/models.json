@@ -137,16 +137,17 @@
       "active_parameters_b": null,
       "architecture": "MoE",
       "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-      "parameter_notes": "Official model card: 552B backbone; active parameters vary by inference mode (8B / 16B). Not the earlier V4 Flash 284B/13B model.",
-      "metadata_verified_at": "2026-10-08",
+      "parameter_notes": "Official model card: 552B backbone; active parameters vary by inference mode (8B / 16B). Not the earlier V4 Flash 284B/13B model. Original September 2026 V4.1 checkpoint; the active deepseek-flash API alias moved to the October 17, 2026 update.",
+      "metadata_verified_at": "2026-10-18",
       "api_model_id": null,
-      "api_status": "active_or_unspecified",
+      "api_status": "superseded",
       "openness": "Open",
       "active_parameters_range_b": [
         8,
         16
       ],
-      "openness_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      "openness_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "superseded_by": "deepseek--deepseek-v4-1-flash-1017"
     },
     {
       "id": "mistral--mistral-small-4",
@@ -522,10 +523,11 @@
       "architecture": null,
       "parameter_source": null,
       "parameter_notes": null,
-      "metadata_verified_at": null,
+      "metadata_verified_at": "2026-10-18",
       "api_model_id": null,
       "api_status": "active_or_unspecified",
-      "openness": "Closed"
+      "openness": "Closed",
+      "openness_note": "Muse Spark Open is not explicitly a public release of the hosted 1.2 checkpoint."
     },
     {
       "id": "meta-openrouter--muse-spark-1-3",
@@ -537,10 +539,11 @@
       "architecture": null,
       "parameter_source": null,
       "parameter_notes": null,
-      "metadata_verified_at": null,
+      "metadata_verified_at": "2026-10-18",
       "api_model_id": "meta/muse-spark-1.3",
       "api_status": "active_or_unspecified",
-      "openness": "Closed"
+      "openness": "Closed",
+      "openness_note": "Meta confirms Muse Spark Open shares the base model with hosted 1.3, but uses additional safety post-training, so the hosted 1.3 checkpoint is not verified identical."
     },
     {
       "id": "mistral--mistral-large-4",
@@ -1161,6 +1164,47 @@
       "related_public_checkpoint": "MiniMaxAI/MiniMax-M3",
       "release_date": "2026-06-01",
       "license_source": "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE"
+    },
+    {
+      "id": "meta-openrouter--muse-spark-open",
+      "name": "Muse Spark Open",
+      "provider": "Meta / OpenRouter",
+      "license": "muse-model-license",
+      "total_parameters_b": 816,
+      "active_parameters_b": 42,
+      "architecture": "Multimodal MoE",
+      "parameter_source": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "parameter_notes": "Meta released Muse Spark Open on October 15 with its own Muse Model License and additional safety post-training. It shares the base model with hosted Muse Spark 1.3, but is not a verified identical checkpoint for hosted Spark 1.2 or 1.3.",
+      "metadata_verified_at": "2026-10-18",
+      "api_model_id": "meta/muse-spark-open",
+      "api_status": "active",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "related_public_checkpoint": "meta-models/Muse-Spark-Open-816B-A42B",
+      "release_date": "2026-10-15"
+    },
+    {
+      "id": "deepseek--deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "provider": "DeepSeek",
+      "license": "mit",
+      "total_parameters_b": 552,
+      "active_parameters_b": null,
+      "active_parameters_range_b": [
+        8,
+        16
+      ],
+      "architecture": "Causal Encoder-Decoder MoE",
+      "parameter_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "parameter_notes": "October 17, 2026 minor version update. 552B denotes officially reported backbone size for V4.1, with 8B activated for prefill and 16B for decode. Hugging Face also lists 763B model-tensor parameters (different counting basis). Updated weights have been published; official API deepseek-flash serves this revision at unchanged prices.",
+      "metadata_verified_at": "2026-10-18",
+      "api_model_id": "deepseek-flash",
+      "api_status": "active",
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "related_public_checkpoint": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "release_date": "2026-10-17",
+      "parameter_basis": "backbone"
     }
   ]
 }

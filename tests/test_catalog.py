@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-10-14**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-10-18**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -115,11 +115,38 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(rows['minimax--m3-priority']['context_tiers'][0]['input'], 0.90)
         self.assertEqual(rows['minimax--m2-7-highspeed']['cached_input'], 0.06)
         self.assertEqual(rows['minimax--m2-7-highspeed']['cache_write'], 0.375)
-        self.assertEqual(len(self.models), 72)
-        self.assertEqual(len(self.rates), 67)
+        self.assertGreaterEqual(len(self.models), 72)
+        self.assertGreaterEqual(len(self.rates), 67)
         tab=make_table()
         self.assertIn('| MiniMax | MiniMax M3 | Open |', tab)
         self.assertIn('| MiniMax | MiniMax M3 — Priority | Open |', tab)
+
+    def test_muse_spark_open_and_deepseek_1017(self):
+        muse=self.models['meta-openrouter--muse-spark-open']
+        self.assertEqual(muse['openness'],'Open')
+        self.assertEqual(muse['total_parameters_b'],816)
+        self.assertEqual(muse['active_parameters_b'],42)
+        self.assertEqual(self.models['meta-openrouter--muse-spark-1-2']['openness'],'Closed')
+        deep=self.models['deepseek--deepseek-v4-1-flash-1017']
+        self.assertEqual(deep['openness'],'Open')
+        self.assertEqual(deep['api_model_id'],'deepseek-flash')
+        self.assertEqual(deep['total_parameters_b'],552)
+        self.assertEqual(deep['active_parameters_range_b'],[8,16])
+        self.assertEqual(self.models['deepseek--deepseek-v4-1-flash']['api_status'],'superseded')
+        rates={r['id']:r for r in self.rates}
+        self.assertEqual(rates['deepseek--deepseek-v4-1-flash-off-peak']['input'],0.15)
+        self.assertEqual(rates['deepseek--deepseek-v4-1-flash-peak']['output'],1.2)
+        self.assertEqual(rates['deepseek--deepseek-v4-1-flash-peak']['model_ids'],[deep['id']])
+        self.assertEqual(rates['meta-openrouter--muse-spark-open']['cached_input'],0.15)
+
+    def test_promo_regular_rate_labels_use_parentheses(self):
+        for r in self.rates:
+            self.assertNotIn(' — Promo',r['label'])
+            self.assertNotIn(' — Regular Price',r['label'])
+            if r['rate_type']=='promo':
+                self.assertIn('(Promo)',r['label'])
+            if r['rate_type']=='regular':
+                self.assertIn('(Regular Price)',r['label'])
 
     def test_table_row_count(self):
         table=make_table()

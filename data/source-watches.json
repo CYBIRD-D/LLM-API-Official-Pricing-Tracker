@@ -56,6 +56,20 @@
         "MiniMax-M3",
         "MiniMax-M2.7"
       ]
+    },
+    {
+      "name": "Meta Muse Spark Open API price",
+      "url": "https://openrouter.ai/meta/muse-spark-open",
+      "patterns": [
+        "Muse Spark Open"
+      ]
+    },
+    {
+      "name": "DeepSeek model release notes",
+      "url": "https://api-docs.deepseek.com/updates/",
+      "patterns": [
+        "DeepSeek"
+      ]
     }
   ]
 }

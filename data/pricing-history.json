@@ -196,6 +196,62 @@
         "pricing_source": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "note": "Local catalog change only; not a vendor announcement date."
+    },
+    {
+      "recorded_at_utc": "2026-10-18T00:00:00Z",
+      "price_id": "deepseek--deepseek-v4-1-flash-off-peak",
+      "old": {
+        "input": 0.15,
+        "cached_input": 0.003,
+        "output": 0.6,
+        "rate_type": "off_peak",
+        "notes": "1M context; off-peak pricing",
+        "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "new": {
+        "input": 0.15,
+        "cached_input": 0.003,
+        "output": 0.6,
+        "rate_type": "off_peak",
+        "notes": "1M context; 1017 update (unchanged API rates); off-peak pricing",
+        "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "note": "Local catalog edit; not an API tariff change or vendor price announcement."
+    },
+    {
+      "recorded_at_utc": "2026-10-18T00:00:00Z",
+      "price_id": "deepseek--deepseek-v4-1-flash-peak",
+      "old": {
+        "input": 0.3,
+        "cached_input": 0.006,
+        "output": 1.2,
+        "rate_type": "peak",
+        "notes": "1M context; peak pricing",
+        "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "new": {
+        "input": 0.3,
+        "cached_input": 0.006,
+        "output": 1.2,
+        "rate_type": "peak",
+        "notes": "1M context; 1017 update (unchanged API rates); peak pricing",
+        "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      "note": "Local catalog edit; not an API tariff change or vendor price announcement."
+    },
+    {
+      "recorded_at_utc": "2026-10-18T00:00:00Z",
+      "price_id": "meta-openrouter--muse-spark-open",
+      "old": null,
+      "new": {
+        "input": 1.25,
+        "cached_input": 0.15,
+        "output": 4.25,
+        "rate_type": "standard",
+        "notes": "1M context; released Oct 15; public weights (safety post-trained, same base as Muse Spark 1.3)",
+        "pricing_source": "https://openrouter.ai/meta/muse-spark-open"
+      },
+      "note": "Local catalog edit; not an API tariff change or vendor price announcement."
     }
   ]
 }

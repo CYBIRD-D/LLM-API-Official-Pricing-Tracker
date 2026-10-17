@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-18 — Muse Spark Open, DeepSeek Flash 1017 and rate-label formatting
+
+- Added **Muse Spark Open** as a separate **Open** model (816B total / 42B active, Muse Model License), released October 15. Its OpenRouter API is $1.25 input, $0.15 cache read and $4.25 output per 1M tokens.
+- **Muse Spark 1.2 and hosted 1.3 remain Closed**: Meta says Spark Open shares the **base** with 1.3 but includes additional safety post-training. Do not conflate it with a byte-identical publicly released hosted checkpoint.
+- Added **DeepSeek-V4.1-Flash-1017** (**Open**, published October 17) and updated the existing DeepSeek Flash peak/off-peak rows to the new revision; unchanged `deepseek-flash` API ID and token prices. Superseded September V4.1 weights remain listed in the model catalog.
+- DeepSeek architecture continues to be reported as 552B backbone, with asymmetric 8B prefill / 16B decode; Hugging Face's 763B tensor inventory uses a different counting basis.
+- Formatted every `— Promo` and `— Regular Price` label as `(Promo)` and `(Regular Price)`; retained the same price record IDs and numeric prices.
+- DeepSeek's new Search and Fetch APIs cost $0.75 per 1,000 successful calls (from October 17 announcement); they are **not** token prices and are intentionally omitted from the model token-price table.
+
 ## 2026-10-14 — Add MiniMax M2.7 and M3
 
 - Added MiniMax **M2.7 (230B / 10B)**, **M2.7 Highspeed (same model)**, and **M3 (428B / 23B)**. All three are **Open** and linked to official downloadable model files.
