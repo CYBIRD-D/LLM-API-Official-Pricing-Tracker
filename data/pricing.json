@@ -1504,7 +1504,70 @@
       "promo_ends_on": null,
       "data_policy": "standard_or_unspecified",
       "time_tier_utc": null
+    },
+    {
+      "id": "minimax--m3-1-flash",
+      "label": "MiniMax M3.1 Flash",
+      "model_ids": [
+        "minimax--m3-1-flash"
+      ],
+      "input": 0.15,
+      "cached_input": 0.015,
+      "output": 0.6,
+      "rate_type": "standard",
+      "notes": "1M context; model weights now publicly available; multimodal input",
+      "pricing_source": "https://www.minimax.io/blog/minimax-m31f",
+      "pricing_verified_at": "2026-10-24",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null
+    },
+    {
+      "id": "kimi--kimi-k3-1-pro",
+      "label": "Kimi K3.1 Pro",
+      "model_ids": [
+        "kimi--kimi-k3-1-pro"
+      ],
+      "input": 2,
+      "cached_input": 0.2,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "1M context; 5-min cache write $2/MTok; planned Open release by Nov 4 (not yet released)",
+      "pricing_source": "https://platform.kimi.ai/",
+      "pricing_verified_at": "2026-10-24",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 2,
+      "cache_write_1h": 4
+    },
+    {
+      "id": "kimi--kimi-k3-1-pro-highspeed",
+      "label": "Kimi K3.1 Pro Highspeed",
+      "model_ids": [
+        "kimi--kimi-k3-1-pro-highspeed"
+      ],
+      "input": 4,
+      "cached_input": 0.2,
+      "output": 20,
+      "rate_type": "highspeed",
+      "notes": "Same K3.1 Pro model, 2–3× faster; 1M context; 5-min cache write $4/MTok",
+      "pricing_source": "https://platform.kimi.ai/",
+      "pricing_verified_at": "2026-10-24",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 4
     }
   ],
-  "last_updated": "2026-10-18"
+  "last_updated": "2026-10-24"
 }

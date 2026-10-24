@@ -70,6 +70,22 @@
       "patterns": [
         "DeepSeek"
       ]
+    },
+    {
+      "name": "Kimi official paygo model prices",
+      "url": "https://platform.kimi.ai/",
+      "patterns": [
+        "K3.1 Pro",
+        "Input"
+      ]
+    },
+    {
+      "name": "MiniMax M3.1 Flash official launch prices",
+      "url": "https://www.minimax.io/blog/minimax-m31f",
+      "patterns": [
+        "M3.1 Flash",
+        "0.15"
+      ]
     }
   ]
 }

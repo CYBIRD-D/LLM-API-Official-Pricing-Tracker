@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-10-18**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-10-24**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -147,6 +147,26 @@ class CatalogTests(unittest.TestCase):
                 self.assertIn('(Promo)',r['label'])
             if r['rate_type']=='regular':
                 self.assertIn('(Regular Price)',r['label'])
+
+    def test_kimi_k31_and_minimax_m31(self):
+        rates={r['id']:r for r in self.rates}
+        k=self.models['kimi--kimi-k3-1-pro']
+        kh=self.models['kimi--kimi-k3-1-pro-highspeed']
+        mf=self.models['minimax--m3-1-flash']
+        self.assertEqual(k['openness'],'Closed')
+        self.assertEqual(kh['openness'],'Closed')
+        self.assertEqual(k['total_parameters_b'],2800)
+        self.assertEqual(k['active_parameters_b'],104)
+        self.assertEqual(k['weights_expected_by'],'2026-11-04')
+        self.assertEqual(kh['hosted_variant_of'],k['id'])
+        self.assertEqual(mf['openness'],'Open')
+        self.assertEqual((mf['total_parameters_b'],mf['active_parameters_b']),(428,23))
+        self.assertIn('MiniMaxAI/MiniMax-M3.1-Flash',mf['parameter_source'])
+        self.assertEqual((rates['kimi--kimi-k3-1-pro']['input'],rates['kimi--kimi-k3-1-pro']['cached_input'],rates['kimi--kimi-k3-1-pro']['output']),(2,0.2,10))
+        self.assertEqual((rates['kimi--kimi-k3-1-pro-highspeed']['input'],rates['kimi--kimi-k3-1-pro-highspeed']['cached_input'],rates['kimi--kimi-k3-1-pro-highspeed']['output']),(4,0.2,20))
+        self.assertEqual((rates['minimax--m3-1-flash']['input'],rates['minimax--m3-1-flash']['cached_input'],rates['minimax--m3-1-flash']['output']),(0.15,0.015,0.6))
+        self.assertIn('| MiniMax | MiniMax M3.1 Flash | Open |',make_table())
+        self.assertIn('| Kimi | Kimi K3.1 Pro | Closed |',make_table())
 
     def test_table_row_count(self):
         table=make_table()

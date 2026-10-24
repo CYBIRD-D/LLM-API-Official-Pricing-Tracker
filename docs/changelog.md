@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-24 — Kimi K3.1 Pro and MiniMax M3.1 Flash
+
+- Added **Kimi K3.1 Pro** and **Kimi K3.1 Pro Highspeed** ($2/$0.20/$10 and $4/$0.20/$20 input/cache read/output per million tokens). The Highspeed API uses the same model at 2–3× speed.
+- Both Kimi K3.1 variants remain **Closed as of October 24**: Moonshot promises publicly downloadable weights by November 4, 2026; an upcoming release does not qualify as Open.
+- K3.1 model scale is **2.8T total / 104B active** (MoE) with a 1M-token context, according to Moonshot's announcement.
+- Added **MiniMax M3.1 Flash**, **Open**, with official downloadable weights available, 428B total / 23B active (MoE), and the MiniMax Community License.
+- MiniMax M3.1 Flash official API rates are $0.15 input, $0.015 cached input, $0.60 output per million tokens. A temporary zero-price launch window through October 22 has expired and is not listed as the current rate.
+- Added 3 new pricing records and preserved existing model prices and labels unchanged. Updated source watch, pricing history and test coverage.
+
 ## 2026-10-18 — Muse Spark Open, DeepSeek Flash 1017 and rate-label formatting
 
 - Added **Muse Spark Open** as a separate **Open** model (816B total / 42B active, Muse Model License), released October 15. Its OpenRouter API is $1.25 input, $0.15 cache read and $4.25 output per 1M tokens.

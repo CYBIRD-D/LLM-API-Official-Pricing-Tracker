@@ -252,6 +252,48 @@
         "pricing_source": "https://openrouter.ai/meta/muse-spark-open"
       },
       "note": "Local catalog edit; not an API tariff change or vendor price announcement."
+    },
+    {
+      "recorded_at_utc": "2026-10-24T13:37:19Z",
+      "price_id": "kimi--kimi-k3-1-pro",
+      "old": null,
+      "new": {
+        "input": 2,
+        "cached_input": 0.2,
+        "output": 10,
+        "rate_type": "standard",
+        "notes": "1M context; 5-min cache write $2/MTok; planned Open release by Nov 4 (not yet released)",
+        "pricing_source": "https://platform.kimi.ai/"
+      },
+      "note": "Local catalog change; does not imply a provider price change date."
+    },
+    {
+      "recorded_at_utc": "2026-10-24T13:37:19Z",
+      "price_id": "kimi--kimi-k3-1-pro-highspeed",
+      "old": null,
+      "new": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20,
+        "rate_type": "highspeed",
+        "notes": "Same K3.1 Pro model, 2–3× faster; 1M context; 5-min cache write $4/MTok",
+        "pricing_source": "https://platform.kimi.ai/"
+      },
+      "note": "Local catalog change; does not imply a provider price change date."
+    },
+    {
+      "recorded_at_utc": "2026-10-24T13:37:19Z",
+      "price_id": "minimax--m3-1-flash",
+      "old": null,
+      "new": {
+        "input": 0.15,
+        "cached_input": 0.015,
+        "output": 0.6,
+        "rate_type": "standard",
+        "notes": "1M context; model weights now publicly available; multimodal input",
+        "pricing_source": "https://www.minimax.io/blog/minimax-m31f"
+      },
+      "note": "Local catalog change; does not imply a provider price change date."
     }
   ]
 }
