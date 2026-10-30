@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-10-24**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-10-30**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -167,6 +167,28 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual((rates['minimax--m3-1-flash']['input'],rates['minimax--m3-1-flash']['cached_input'],rates['minimax--m3-1-flash']['output']),(0.15,0.015,0.6))
         self.assertIn('| MiniMax | MiniMax M3.1 Flash | Open |',make_table())
         self.assertIn('| Kimi | Kimi K3.1 Pro | Closed |',make_table())
+
+    def test_mistral_large4_is_public_at_new_price(self):
+        model=self.models['mistral--mistral-large-4']
+        self.assertEqual(model['openness'],'Open')
+        self.assertEqual((model['total_parameters_b'],model['active_parameters_b']),(1050,52))
+        self.assertIn('Mistral-Large-4-1T-A52B',model['parameter_source'])
+        price=next(p for p in self.rates if p['id']==model['id'])
+        self.assertEqual((price['input'],price['cached_input'],price['output']),(0.7,0.07,2.1))
+        self.assertEqual(price['rate_type'],'standard')
+
+    def test_gpt61_terra_pricing_and_long_context(self):
+        model=self.models['openai--gpt-6-1-terra']
+        self.assertEqual(model['openness'],'Closed')
+        self.assertIsNone(model['total_parameters_b'])
+        self.assertEqual(model['api_model_id'],'gpt-6.1-terra')
+        price=next(p for p in self.rates if p['id']==model['id'])
+        self.assertEqual((price['input'],price['cached_input'],price['output']),(1,0.05,5))
+        self.assertEqual((price['cache_write'],price['cache_write_12h']),(1.25,2.5))
+        t=price['context_tiers'][0]
+        self.assertEqual((t['min_prompt_tokens'],t['max_prompt_tokens']),(272001,1050000))
+        self.assertEqual((t['input'],t['cached_input'],t['output']),(2,0.1,7.5))
+        self.assertIn('| OpenAI | GPT-6.1 Terra | Closed |',make_table())
 
     def test_table_row_count(self):
         table=make_table()

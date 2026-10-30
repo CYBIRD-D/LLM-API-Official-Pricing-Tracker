@@ -549,17 +549,20 @@
       "id": "mistral--mistral-large-4",
       "name": "Mistral Large 4",
       "provider": "Mistral",
-      "license": null,
+      "license": "mistral-ecosystem-open-weight-v26.10",
       "total_parameters_b": 1050,
-      "active_parameters_b": 49,
-      "architecture": "MoE",
-      "parameter_source": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B",
-      "parameter_notes": "Weights planned Oct 31, 2026; 49B core activated, ~52B including embeddings / output layers.",
-      "metadata_verified_at": "2026-10-08",
+      "active_parameters_b": 52,
+      "architecture": "Multimodal MoE",
+      "parameter_source": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "parameter_notes": "Official FP8 and NVFP4 checkpoints published October 29, 2026. 1.05T total / 52B active including embeddings and output layers (49B core-active); separate 1.6B vision encoder. License allows general commercial use, but hosted model-as-a-service businesses need a separate Mistral license.",
+      "metadata_verified_at": "2026-10-30",
       "api_model_id": "mistral-large-4",
       "api_status": "public_preview",
-      "openness": "Closed",
-      "openness_note": "Release of public checkpoint announced but not verified as downloadable by the data cutoff."
+      "openness": "Open",
+      "openness_source": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "related_public_checkpoint": "mistralai/Mistral-Large-4-1T-A52B",
+      "release_date": "2026-10-29",
+      "release_source": "https://mistral.ai/news/mistral-large-4-oss/"
     },
     {
       "id": "glm-z-ai--glm-5-1",
@@ -1263,6 +1266,24 @@
       "release_date": "2026-10-19",
       "openness_source": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
       "related_public_checkpoint": "MiniMaxAI/MiniMax-M3.1-Flash"
+    },
+    {
+      "id": "openai--gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "provider": "OpenAI",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "Parameters not publicly disclosed. 1.05M context window, 128K maximum output; text/image input and text output. Released October 26, 2026.",
+      "metadata_verified_at": "2026-10-30",
+      "api_model_id": "gpt-6.1-terra",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "No downloadable GPT-6.1 Terra checkpoint publicly released.",
+      "openness_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "release_date": "2026-10-26"
     }
   ]
 }

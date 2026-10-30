@@ -294,6 +294,41 @@
         "pricing_source": "https://www.minimax.io/blog/minimax-m31f"
       },
       "note": "Local catalog change; does not imply a provider price change date."
+    },
+    {
+      "recorded_at_utc": "2026-10-30T13:51:26Z",
+      "price_id": "mistral--mistral-large-4",
+      "old": {
+        "input": 1.36,
+        "cached_input": 0.14,
+        "output": 4.18,
+        "rate_type": "standard",
+        "notes": "1M context; public preview; regular published price",
+        "pricing_source": "https://docs.mistral.ai/models/mistral-large-4-0"
+      },
+      "new": {
+        "input": 0.7,
+        "cached_input": 0.07,
+        "output": 2.1,
+        "rate_type": "standard",
+        "notes": "1M context; Oct 29 open release; current official standard API price",
+        "pricing_source": "https://docs.mistral.ai/models/mistral-large-4-0"
+      },
+      "note": "Catalog change; Mistral announced new price October 29, 2026."
+    },
+    {
+      "recorded_at_utc": "2026-10-30T13:51:26Z",
+      "price_id": "openai--gpt-6-1-terra",
+      "old": null,
+      "new": {
+        "input": 1,
+        "cached_input": 0.05,
+        "output": 5,
+        "rate_type": "standard",
+        "notes": "1.05M context; >272K prompt: $2 input / $0.10 cache / $7.50 output; 30m cache write $1.25",
+        "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+      },
+      "note": "Catalog change; Mistral announced new price October 29, 2026."
     }
   ]
 }

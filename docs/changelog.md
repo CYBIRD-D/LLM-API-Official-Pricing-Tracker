@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-30 — Mistral Large 4 public model and GPT-6.1 Terra
+
+- Changed **Mistral Large 4** to **Open**: Mistral released official downloadable FP8 and NVFP4 files October 29. Updated parameters to **1.05T / 52B active** (49B core-active) and recorded the Mistral Ecosystem Open-Weight License v26.10.
+- Updated Mistral Large 4's **official current standard rate**, not a temporary promo, to **$0.70 input / $0.07 cached / $2.10 output** per million tokens (previously $1.36/$0.14/$4.18). No extra sale/regular rows were created.
+- Added **GPT-6.1 Terra** (October 26, **Closed**, undisclosed parameters). Official standard API: **$1 input / $0.05 cached / $5 output** per million tokens, with separate >272K context tiers and cache-write fees.
+- Updated README, model catalog, price-history snapshot, source links and automated tests; other vendor prices unchanged.
+
 ## 2026-10-24 — Kimi K3.1 Pro and MiniMax M3.1 Flash
 
 - Added **Kimi K3.1 Pro** and **Kimi K3.1 Pro Highspeed** ($2/$0.20/$10 and $4/$0.20/$20 input/cache read/output per million tokens). The Highspeed API uses the same model at 2–3× speed.

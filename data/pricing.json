@@ -704,19 +704,20 @@
       "model_ids": [
         "mistral--mistral-large-4"
       ],
-      "input": 1.36,
-      "cached_input": 0.14,
-      "output": 4.18,
+      "input": 0.7,
+      "cached_input": 0.07,
+      "output": 2.1,
       "rate_type": "standard",
-      "notes": "1M context; public preview; regular published price",
+      "notes": "1M context; Oct 29 open release; current official standard API price",
       "pricing_source": "https://docs.mistral.ai/models/mistral-large-4-0",
-      "pricing_verified_at": "2026-10-08",
+      "pricing_verified_at": "2026-10-30",
       "pricing_review": "source_checked",
       "context_tiers": [],
       "promo_guaranteed_through": null,
       "promo_ends_on": null,
       "data_policy": "standard_or_unspecified",
-      "time_tier_utc": null
+      "time_tier_utc": null,
+      "price_effective_from": "2026-10-29"
     },
     {
       "id": "glm-z-ai--glm-5-1",
@@ -1567,7 +1568,37 @@
       "data_policy": "standard_or_unspecified",
       "time_tier_utc": null,
       "cache_write": 4
+    },
+    {
+      "id": "openai--gpt-6-1-terra",
+      "label": "GPT-6.1 Terra",
+      "model_ids": [
+        "openai--gpt-6-1-terra"
+      ],
+      "input": 1,
+      "cached_input": 0.05,
+      "output": 5,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K prompt: $2 input / $0.10 cache / $7.50 output; 30m cache write $1.25",
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "pricing_verified_at": "2026-10-30",
+      "pricing_review": "source_checked",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 272001,
+          "max_prompt_tokens": 1050000,
+          "input": 2,
+          "cached_input": 0.1,
+          "output": 7.5
+        }
+      ],
+      "cache_write": 1.25,
+      "cache_write_12h": 2.5,
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null
     }
   ],
-  "last_updated": "2026-10-24"
+  "last_updated": "2026-10-30"
 }
